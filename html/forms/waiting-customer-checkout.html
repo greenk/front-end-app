@@ -1789,17 +1789,17 @@
                   <div class="pearl current col-3">
                     <div class="pearl-icon">1</div>
                     <span class="pearl-title">TOTAL</span>
-                    <strong class="pearl-title">$85.00</strong>
+                    <strong id="total-step1" class="pearl-title spn-reset"></strong>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">2</div>
                     <span class="pearl-title">PAYMENT</span>
-                    <strong class="pearl-title">$85.00</strong>
+                    <strong id="total-step2" class="pearl-title spn-reset"></strong>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">3</div>
                     <span class="pearl-title">TIP ADJUSTMENT</span>
-                    <strong class="pearl-title">$20.00</strong>
+                    <strong id="total-step3" class="pearl-title spn-reset"></strong>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">4</div>
@@ -1808,215 +1808,222 @@
                 </div>
                 <!-- End Steps -->
                 <!-- Wizard Content -->
-                <div class="wizard-content">
-                  <div class="wizard-pane active" role="tabpanel">
-                    <div class="winzard-pane-header">
-                      <h5>Paying For:</h5>
+                <form id="frm-group-pay">
+                  <div class="wizard-content">
+                    <div class="wizard-pane active" role="tabpanel">
+                      <div class="winzard-pane-header">
+                        <h5>Paying For:</h5>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-hover" id="tbl-step1">
+                          <thead>
+                            <tr>
+                              <th>NAME</th>
+                              <th>EMPLOYEE</th>
+                              <th>TOTAL</th>
+                            </tr>
+                          </thead>
+                          <tfoot>
+                            <tr>
+                              <th><strong>Total:</strong></th>
+                              <th></th>
+                              <th>
+                                <button id="btn-total-step1" class="btn btn-block btn-primary"></button>
+                              </th>
+                            </tr>
+                          </tfoot>
+                          <tbody>
+                            <tr>
+                              <td>Airi Satou</td>
+                              <td>Thu Nguyen (Christina), Binh Bui (Ben)</td>
+                              <td>$25.00</td>
+                            </tr>
+                            <tr>
+                              <td>Airi Satou 2</td>
+                              <td>Ha Pham (Park)</td>
+                              <td>$60.00</td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-                    <div class="table-responsive">
-                      <table class="table table-hover" id="tbl-step1">
-                        <thead>
-                          <tr>
-                            <th>NAME</th>
-                            <th>EMPLOYEE</th>
-                            <th>TOTAL</th>
-                          </tr>
-                        </thead>
-                        <tfoot>
-                          <tr>
-                            <th><strong>Total:</strong></th>
-                            <th></th>
-                            <th>
-                              <button class="btn btn-block btn-primary">$85.00</button>
-                            </th>
-                          </tr>
-                        </tfoot>
-                        <tbody>
-                          <tr>
-                            <td>Airi Satou</td>
-                            <td>Thu Nguyen (Christina), Binh Bui (Ben)</td>
-                            <td>$25.00</td>
-                          </tr>
-                          <tr>
-                            <td>Airi Satou 2</td>
-                            <td>Ha Pham (Park)</td>
-                            <td>$60.00</td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="wizard-pane" role="tabpanel">
-                    <div class="winzard-pane-area">
-                      <h5>Payment:</h5>
-                      <div class="row">
-                        <div class="col-sm-4 col-xs-12">
-                          <select class="form-control" placeholder="Type">
-                            <option>Credit Card</option>
-                            <option>Cash</option>
-                            <option>Gift</option>
-                            <option>Check</option>
-                          </select>
+                    <div class="wizard-pane" role="tabpanel">
+                      <div class="winzard-pane-area">
+                        <h5>Payment:</h5>
+                        <div class="row">
+                          <div class="col-sm-4 col-xs-12">
+                            <select class="form-control" placeholder="Type" name="paymenttype" required="required">
+                              <option>Credit Card</option>
+                              <option>Cash</option>
+                              <option>Gift</option>
+                              <option>Check</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-8 col-xs-12">
+                            <input type="text" id="payment-bal" class="form-control inp-reset" value="85.00" name="paymentbal"
+                            required="required" data-inputmask="'alias': 'currency', 'rightAlign': false" disabled="disabled">
+                          </div>
                         </div>
-                        <div class="col-sm-8 col-xs-12">
-                          <input type="text" class="form-control" value="85.00">
+                      </div>
+                      <div class="winzard-pane-area">
+                        <h5>Tip Payment:</h5>
+                        <div class="row">
+                          <div class="col-sm-4 col-xs-12">
+                            <select class="form-control" name="tiptype" required="required">
+                              <option>Credit Card</option>
+                              <option>Cash</option>
+                              <option>Gift</option>
+                              <option>Check</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-8 col-xs-12">
+                            <input type="text" id="tip-bal" class="form-control inp-reset" value="" name="tipbal"
+                            required="required" data-inputmask="'alias': 'currency', 'rightAlign': false">
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="winzard-pane-area">
-                      <h5>Tip Payment:</h5>
-                      <div class="row">
-                        <div class="col-sm-4 col-xs-12">
-                          <select class="form-control">
-                            <option>Credit Card</option>
-                            <option>Cash</option>
-                            <option>Gift</option>
-                            <option>Check</option>
-                          </select>
-                        </div>
-                        <div class="col-sm-8 col-xs-12">
-                          <input type="text" class="form-control" value="20.00">
+                    <div class="wizard-pane" role="tabpanel">
+                      <div class="winzard-pane-header">
+                        <h5>Tip Adjustments:</h5>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-hover" id="tbl-step2">
+                          <thead>
+                            <tr>
+                              <th>NAME</th>
+                              <th>EMPLOYEE</th>
+                              <th class="text-center">TOTAL</th>
+                            </tr>
+                          </thead>
+                          <tfoot>
+                            <tr>
+                              <th><strong>Tip Total:</strong></th>
+                              <th></th>
+                              <th class="text-center">
+                                <button id="btn-total-tip" class="btn btn-block btn-primary">$20.00</button>
+                              </th>
+                            </tr>
+                          </tfoot>
+                          <tbody>
+                            <tr>
+                              <td>Airi Satou</td>
+                              <td>Thu Nguyen (Christina), Binh Bui (Ben)</td>
+                              <td class="text-center">
+                                <input type="text" class="form-control text-center" value="10.00">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Airi Satou 2</td>
+                              <td>Ha Pham (Park)</td>
+                              <td class="text-center">
+                                <input type="text" class="form-control text-center" value="10.00">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td class="text-center"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="form-group text-center">
+                            <input type="hidden" name="hiddenCheck" id="hiddenCheck" />
                         </div>
                       </div>
                     </div>
+                    <div class="wizard-pane" role="tabpanel">
+                      <div class="winzard-pane-header">
+                        <h5>Confirmation</h5>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-hover" id="tbl-step3">
+                          <thead>
+                            <tr>
+                              <th>NAME</th>
+                              <th>EMPLOYEE</th>
+                              <th>TOTAL</th>
+                              <th>TIPS</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Airi Satou</td>
+                              <td>Thu Nguyen (Christina), Binh Bui (Ben)</td>
+                              <td>25.00</td>
+                              <td>10.00</td>
+                            </tr>
+                            <tr>
+                              <td>Airi Satou 2</td>
+                              <td>Ha Pham (Park)</td>
+                              <td>60.00</td>
+                              <td>10.00</td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  <!-- Wizard Content -->
                   </div>
-                  <div class="wizard-pane" role="tabpanel">
-                    <div class="winzard-pane-header">
-                      <h5>Tip Adjustments:</h5>
-                    </div>
-                    <div class="table-responsive">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>NAME</th>
-                            <th>EMPLOYEE</th>
-                            <th class="text-center">TOTAL</th>
-                          </tr>
-                        </thead>
-                        <tfoot>
-                          <tr>
-                            <th><strong>Tip Total:</strong></th>
-                            <th></th>
-                            <th class="text-center">
-                              <button class="btn btn-block btn-primary">$20.00</button>
-                            </th>
-                          </tr>
-                        </tfoot>
-                        <tbody>
-                          <tr>
-                            <td>Airi Satou</td>
-                            <td>Thu Nguyen (Christina), Binh Bui (Ben)</td>
-                            <td class="text-center">
-                              <input type="text" class="form-control text-center" value="10.00">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Airi Satou 2</td>
-                            <td>Ha Pham (Park)</td>
-                            <td class="text-center">
-                              <input type="text" class="form-control text-center" value="10.00">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="text-center"></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="text-center"></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="text-center"></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="text-center"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="wizard-pane" role="tabpanel">
-                    <div class="winzard-pane-header">
-                      <h5>Confirmation</h5>
-                    </div>
-                    <div class="table-responsive">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>NAME</th>
-                            <th>EMPLOYEE</th>
-                            <th>TOTAL</th>
-                            <th>TIPS</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Airi Satou</td>
-                            <td>Thu Nguyen (Christina), Binh Bui (Ben)</td>
-                            <td>25.00</td>
-                            <td>10.00</td>
-                          </tr>
-                          <tr>
-                            <td>Airi Satou 2</td>
-                            <td>Ha Pham (Park)</td>
-                            <td>60.00</td>
-                            <td>10.00</td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                <!-- Wizard Content -->
                 </div>
               </div>
             <!-- End Panel Wizard Form Container -->
@@ -2041,9 +2048,10 @@
     <script src="../../assets/vendor/intro-js/intro.js"></script>
     <script src="../../assets/vendor/screenfull/screenfull.js"></script>
     <script src="../../assets/vendor/datatables.net/jquery.dataTables.js"></script>
-    <script src="../../assets/vendor/jquery-wizard/jquery-wizard.js"></script>
     <script src="../../assets/vendor/formvalidation/formValidation.js"></script>
     <script src="../../assets/vendor/formvalidation/framework/bootstrap.js"></script>
+    <script src="../../assets/vendor/jquery-wizard/jquery-wizard.js"></script>
+    <script src="../../assets/vendor/input-mask/jquery.inputmask.bundle.js"></script>
 
     <!-- Scripts -->
     <script src="../../assets/js/Component.js"></script>
