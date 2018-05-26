@@ -1789,17 +1789,17 @@
                   <div class="pearl current col-3">
                     <div class="pearl-icon">1</div>
                     <span class="pearl-title">TOTAL</span>
-                    <strong id="total-step1" class="pearl-title spn-reset"></strong>
+                    <strong id="spn-total" class="pearl-title spn-reset"></strong>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">2</div>
                     <span class="pearl-title">PAYMENT</span>
-                    <strong id="total-step2" class="pearl-title spn-reset"></strong>
+                    <strong id="spn-payment" class="pearl-title spn-reset"></strong>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">3</div>
                     <span class="pearl-title">TIP ADJUSTMENT</span>
-                    <strong id="total-step3" class="pearl-title spn-reset"></strong>
+                    <strong id="spn-tip" class="pearl-title spn-reset"></strong>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">4</div>
@@ -1815,7 +1815,7 @@
                         <h5>Paying For:</h5>
                       </div>
                       <div class="table-responsive">
-                        <table class="table table-hover" id="tbl-step1">
+                        <table class="table table-hover" id="tbl-total">
                           <thead>
                             <tr>
                               <th>NAME</th>
@@ -1828,7 +1828,7 @@
                               <th><strong>Total:</strong></th>
                               <th></th>
                               <th>
-                                <button id="btn-total-step1" class="btn btn-block btn-primary"></button>
+                                <button id="btn-total" class="btn btn-block btn-primary"></button>
                               </th>
                             </tr>
                           </tfoot>
@@ -1898,7 +1898,7 @@
                           </div>
                           <div class="col-sm-8 col-xs-12">
                             <input type="text" id="tip-bal" class="form-control inp-reset" value="" name="tipbal"
-                            required="required" data-inputmask="'alias': 'currency', 'rightAlign': false">
+                            data-inputmask="'alias': 'currency', 'rightAlign': false" value="0">
                           </div>
                         </div>
                       </div>
@@ -1908,7 +1908,7 @@
                         <h5>Tip Adjustments:</h5>
                       </div>
                       <div class="table-responsive">
-                        <table class="table table-hover" id="tbl-step2">
+                        <table class="table table-hover" id="tbl-tip">
                           <thead>
                             <tr>
                               <th>NAME</th>
@@ -1921,7 +1921,7 @@
                               <th><strong>Tip Total:</strong></th>
                               <th></th>
                               <th class="text-center">
-                                <button id="btn-total-tip" class="btn btn-block btn-primary">$20.00</button>
+                                <button id="btn-tip" class="btn btn-block btn-primary">$20.00</button>
                               </th>
                             </tr>
                           </tfoot>
@@ -1972,7 +1972,7 @@
                         <h5>Confirmation</h5>
                       </div>
                       <div class="table-responsive">
-                        <table class="table table-hover" id="tbl-step3">
+                        <table class="table table-hover" id="tbl-confirm">
                           <thead>
                             <tr>
                               <th>NAME</th>
@@ -2051,7 +2051,8 @@
     <script src="../../assets/vendor/formvalidation/formValidation.js"></script>
     <script src="../../assets/vendor/formvalidation/framework/bootstrap.js"></script>
     <script src="../../assets/vendor/jquery-wizard/jquery-wizard.js"></script>
-    <script src="../../assets/vendor/input-mask/jquery.inputmask.bundle.js"></script>
+    <script src="../../assets/custom-vendor/decimal/decimal.js"></script>
+    <script src="../../assets/custom-vendor/input-mask/jquery.inputmask.bundle.js"></script>
 
     <!-- Scripts -->
     <script src="../../assets/js/Component.js"></script>
