@@ -27,6 +27,24 @@ var tblCustomer; // Table customer in main form
            }
         });
 
+        $('#tbl-customer .selectable-all').click(function() {
+          $(this).toggleClass('selected');
+          if($(this).hasClass('selected')) {
+            $('#tbl-customer tbody > tr').each(function() {
+              if(!$(this).hasClass('selected')) $(this).addClass('selected');
+            });
+          } else {
+            $('#tbl-customer tbody > tr').each(function() {
+              $(this).removeClass('selected');
+            });
+          }
+          if(tblCustomer.rows('.selected').data().length >= 1) {
+            $('#btn-group-checkout').prop('disabled', false);
+          } else {
+            $('#btn-group-checkout').prop('disabled', true);
+          }
+        });
+
         //// Init Winzard
         var option = getWinzardOption();
         $('#pnl-winzard').wizard(option);
