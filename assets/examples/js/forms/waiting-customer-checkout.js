@@ -27,9 +27,9 @@ var tblCustomer; // Table customer in main form
            }
         });
 
-        $('#tbl-customer .selectable-all').click(function() {
-          $(this).toggleClass('selected');
-          if($(this).hasClass('selected')) {
+        //// Handle check all
+        $("#tbl-customer .selectable-all").change(function() {
+          if($(this).is(':checked')) {
             $('#tbl-customer tbody > tr').each(function() {
               if(!$(this).hasClass('selected')) $(this).addClass('selected');
             });
