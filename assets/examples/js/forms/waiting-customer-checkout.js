@@ -236,7 +236,11 @@ function setDataStep3() {
   var totalTip = new Decimal(0);
   $.each(custSelected, function (index, value) {
     var payOne = new Decimal(value[4].match(/\d+/).toString());
-    tipPerOne = ((payOne.div(payment)).times(tip)).toFixed(2);
+    if(index == custSelected.length - 1) {
+      tipPerOne = tip.minus(totalTip);
+    } else {
+      tipPerOne = ((payOne.div(payment)).times(tip)).toFixed(2);
+    }    
     totalTip = totalTip.plus(tipPerOne);
     inputtip = '<input type="text" id="inp-tip'+index+'" class="form-control inp-tip inp-reset" onblur="changeTip()" value="'+tipPerOne+'" data-inputmask="\'alias\': \'currency\', \'rightAlign\': false">';
     dataset.push([value[1], value[3], inputtip]);
