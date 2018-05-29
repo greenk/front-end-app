@@ -194,7 +194,7 @@ function setDataStep1() {
       "columns": [
           { "title": "NAME" },
           { "title": "EMPLOYEE" },
-          { "title": 'TOTAL', 'class': 'text-center' }
+          { "title": 'TOTAL', 'class': 'text-center', 'width': '25%' }
       ],
       responsive: true,
       "paging": false,
@@ -240,7 +240,7 @@ function setDataStep3() {
       tipPerOne = tip.minus(totalTip);
     } else {
       tipPerOne = ((payOne.div(payment)).times(tip)).toFixed(2);
-    }    
+    }
     totalTip = totalTip.plus(tipPerOne);
     inputtip = '<input type="text" id="inp-tip'+index+'" class="form-control inp-tip inp-reset" onblur="changeTip()" value="'+tipPerOne+'" data-inputmask="\'alias\': \'currency\', \'rightAlign\': false">';
     dataset.push([value[1], value[3], inputtip]);
@@ -254,7 +254,7 @@ function setDataStep3() {
       "columns": [
           { "title": "NAME" },
           { "title": "EMPLOYEE" },
-          { "title": 'TOTAL', 'class': 'text-center' }
+          { "title": 'TOTAL', 'class': 'text-center', 'width': '25%' }
       ],
       responsive: true,
       "paging": false,
@@ -285,8 +285,8 @@ function setDataStep4() {
       "columns": [
           { "title": "NAME" },
           { "title": "EMPLOYEE" },
-          { "title": 'TOTAL', 'class': 'text-center' },
-          { "title": 'TIPS', 'class': 'text-center' }
+          { "title": 'TOTAL', 'class': 'text-center', 'width': '18%' },
+          { "title": 'TIPS', 'class': 'text-center', 'width': '18%' }
       ],
       responsive: true,
       "paging": false,
