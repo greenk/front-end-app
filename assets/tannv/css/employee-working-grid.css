@@ -1,0 +1,34 @@
+.btn-status {
+  padding: 0px 20px;
+}
+.btn-enter {
+  padding: 5px 25px;
+}
+.border-availble {
+  border: 2px solid #4caf50;
+}
+.border-working {
+  border: 2px solid #f44336;
+}
+.border-nocheckin {
+  border: 2px solid #9e9e9e;
+}
+.card {
+  cursor: pointer;
+}
+/*************** Modify Modal Header****************/
+#mdl-enter .modal-header {
+  padding: 15px 20px;
+  position: relative;
+}
+#mdl-enter .modal-header > .modal-title {
+  margin: 0 auto;
+  text-align: center;
+}
+#mdl-enter .modal-header > button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  margin: 0;
+}
+/*************** End Modify Modal Header****************/
