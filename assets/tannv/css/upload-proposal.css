@@ -1,0 +1,13 @@
+#contain-image {
+  position: relative;
+}
+#contain-image > .username {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+#contain-image > .password {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+}
