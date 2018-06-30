@@ -1,0 +1,15 @@
+.datepicker-inline {
+  width: 100%;
+}
+.datepicker-inline .table-condensed{
+  width: 100%;
+}
+.btn-time {
+  margin: 5px 0;
+}
+.sp-nailtech {
+  font-size: 1.286rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #37474f;
+}
