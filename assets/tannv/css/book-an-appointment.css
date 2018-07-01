@@ -1,8 +1,19 @@
+.pearl {
+  cursor: pointer;
+}
 .datepicker-inline {
   width: 100%;
 }
 .datepicker-inline .table-condensed{
   width: 100%;
+  font-size: 15px;
+  color: #526069;
+}
+.div-select-service, .div-nailtech, .div-confirm {
+  font-size: 16px;
+}
+.datepicker-inline .table-condensed td.active {
+  background-color: #009688 !important;
 }
 .btn-time {
   margin: 5px 0;
@@ -12,4 +23,12 @@
   font-weight: 500;
   line-height: 1.2;
   color: #37474f;
+}
+@media (max-width: 750px) {
+  .btn-next, .btn-finish {
+    float: none !important;
+  }
+  .winzard-buttons {
+    text-align: center;
+  }
 }

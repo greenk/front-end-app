@@ -1608,19 +1608,19 @@
                 <div class="pearls row">
                   <div class="pearl current col-3">
                     <div class="pearl-icon">1</div>
-                    <span class="pearl-title">Fill Info</span>
+                    <span class="pearl-title d-none d-md-block">Fill Info</span>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">2</div>
-                    <span class="pearl-title">Select Service</span>
+                    <span class="pearl-title d-none d-md-block">Select Service</span>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">3</div>
-                    <span class="pearl-title">NailTech</span>
+                    <span class="pearl-title d-none d-md-block">NailTech</span>
                   </div>
                   <div class="pearl col-3">
                     <div class="pearl-icon">4</div>
-                    <span class="pearl-title">Confirmation</span>
+                    <span class="pearl-title d-none d-md-block">Confirmation</span>
                   </div>
                 </div>
                 <!-- End Steps -->
@@ -1631,14 +1631,14 @@
                     <div class="wizard-pane active" id="exampleAccountOne" role="tabpanel">
                       <div class="row">
                         <div class="col-lg-6 col-12">
-                          <h4>Select Date</h4>
+                          <h4 class="my-20 text-center">Select Date</h4>
                           <div class="select-date">
                             <div id="inlineDatepicker" data-autoclose="false" data-date="06/30/2018"></div>
                             <input type="hidden" id="inputHiddenInline" />
                           </div>
                         </div>
                         <div class="col-lg-6 col-12">
-                          <h4>Select Time</h4>
+                          <h4 class="my-20 text-center">Select Time</h4>
                           <div class="row">
                             <div class="col-4">
                               <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">10:00 am</button>
@@ -1696,7 +1696,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="wizard-pane" id="exampleBillingOne" role="tabpanel">
+                    <div class="wizard-pane div-select-service" id="exampleBillingOne" role="tabpanel">
                       <h4 class="my-20">Select Service</h4>
                       <div class="row">
                         <div class="col-lg-4 col-12">
@@ -1739,10 +1739,10 @@
                         </div>
                       </div>
                     </div>
-                    <div class="wizard-pane" id="exampleGettingOne" role="tabpanel">
+                    <div class="wizard-pane div-nailtech" id="exampleGettingOne" role="tabpanel">
                       <div class="text-center my-20">
                         <h4>Do you request for a Nailtech?</h4>
-                        <div>
+                        <div class="my-20">
                           <div class="radio-custom radio-primary radio-inline">
                             <input type="radio" id="cb-confirm-yes" name="cb-confirm">
                             <label for="cb-confirm-yes">Yes</label>
@@ -1753,7 +1753,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="row">
+                      <div class="row d-none">
                         <div class="col-lg-4 offset-lg-4 col-12">
                           <div class="form-group">
                             <label class="form-control-label" for="inp-nailtech">Nailtech work on date</label>
@@ -1776,7 +1776,7 @@
                       </div>
                     </div>
 
-                    <div class="wizard-pane" role="tabpanel">
+                    <div class="wizard-pane div-confirm" role="tabpanel">
                       <div class="text-center my-20">
                         <h4>Mary</h4>
                         <h4>Thursday, 15/06/2018</h4>

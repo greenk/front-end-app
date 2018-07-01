@@ -89,6 +89,13 @@
 
         return true;
       },
+      templates: {
+        buttons: function buttons() {
+          var options = this.options;
+          var html = '<div class="winzard-buttons mt-20">' + '<a class="btn btn-default mr-20" href="#exampleWizardFormContainer" data-wizard="back" role="button">Previous</a>' + '<a class="btn btn-success btn-finish float-right" href="#exampleWizardFormContainer" data-wizard="finish" role="button">Book an appointment</a>' + '<a class="btn btn-primary btn-next float-right" href="#exampleWizardFormContainer" data-wizard="next" id="btn-next" role="button">Next</a>' + '</div>';
+          return html;
+        }
+      },
       onFinish: function onFinish() {
         // $('#exampleFormContainer').submit();
       },
@@ -96,6 +103,10 @@
     });
 
     (0, _jquery2.default)("#exampleWizardFormContainer").wizard(options);
+
+    var wizard = $("#exampleWizardFormContainer").data('wizard');
+    //$("#exampleWizardFormContainer").off('click', 'li.complete');
+    //$("#exampleWizardFormContainer").on('click', 'li', $.proxy(wizard.stepclicked, wizard));
   })();
 
   function truncateDate(date) {
