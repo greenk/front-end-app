@@ -1,0 +1,72 @@
+.page-aside-title {
+  margin: 0;
+}
+.page-aside .list-group-item {
+  cursor: pointer;
+  padding: 5px 30px;
+}
+.page-aside .list-group-item.active {
+    color: #526069;
+    font-weight: 500;
+    background-color: transparent;
+}
+.page-aside .list-group-item.active:focus, .page-aside .list-group-item.active:hover,
+.page-aside .list-group-item:focus, .page-aside .list-group-item:hover {
+    color: #526069;
+    background-color: #f3f7f9;
+    font-weight: 500;
+    border: 0;
+}
+
+.page-main {
+    background-color: #fff;
+}
+.card-block {
+  padding: 13px;
+}
+.content-head {
+  font-weight: 600;
+  color: #37474f;
+}
+.p-service {
+  height: 3rem;
+}
+.badge-status {
+  padding: 7px 14px;
+}
+
+.p-pass-booking {
+  margin: 0px 24px 20px 24px;
+}
+.wizard-pane {
+  display: none;
+}
+.wizard-pane.active {
+  display: block;
+}
+.pearl {
+  cursor: pointer;
+}
+.datepicker-inline {
+  width: 100%;
+}
+.datepicker-inline .table-condensed{
+  width: 100%;
+  font-size: 15px;
+  color: #526069;
+}
+.div-select-service, .div-nailtech, .div-confirm {
+  font-size: 16px;
+}
+.datepicker-inline .table-condensed td.active {
+  background-color: #009688 !important;
+}
+.btn-time {
+  margin: 5px 0;
+}
+.sp-nailtech {
+  font-size: 1.286rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #37474f;
+}
