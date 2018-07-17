@@ -63,6 +63,8 @@
 }
 .btn-time {
   margin: 5px 0;
+  max-width: 100px;
+  width: 100px;
 }
 .sp-nailtech {
   font-size: 1.286rem;

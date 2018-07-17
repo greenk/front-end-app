@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="../../assets/vendor/bootstrap-touchspin/bootstrap-touchspin.css">
     <link rel="stylesheet" href="../../assets/vendor/jquery-selective/jquery-selective.css">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../../assets/vendor/select2/select2.css">
+    
     <link rel="stylesheet" href="../../assets/tannv/css/appointment-managerment.css">
 
 
@@ -1911,16 +1913,16 @@
                         <h4>Do you request for a Nailtech?</h4>
                         <div class="my-20">
                           <div class="radio-custom radio-primary radio-inline">
-                            <input type="radio" id="cb-confirm-yes" name="cb-confirm">
+                            <input type="radio" value="Y" name="cb-confirm" class="cb-nailtech">
                             <label for="cb-confirm-yes">Yes</label>
                           </div>
                           <div class="radio-custom radio-primary radio-inline">
-                            <input type="radio" id="cb-confirm-no" name="cb-confirm">
+                            <input type="radio" value="N" name="cb-confirm" class="cb-nailtech">
                             <label for="cb-confirm-no">No</label>
                           </div>
                         </div>
                       </div>
-                      <div class="row d-none">
+                      <div id="nailtech-div" class="row d-none">
                         <div class="col-lg-4 offset-lg-4 col-12">
                           <div class="form-group">
                             <label class="form-control-label" for="inp-nailtech">Nailtech work on date</label>

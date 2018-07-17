@@ -4,12 +4,8 @@
     var _jquery2 = babelHelpers.interopRequireDefault($);
     $(document).ready(function() {
         Site.run();
-        //
-        //
-        // //// Init Winzard
-        // var option = getWinzardOption();
-        // $('#pnl-winzard').wizard(option);
 
+        //// Show pop up create appointment
         $('#btn-create-appointment').click(function() {
           $('#mdl-create-appointment').modal('toggle');
         });
@@ -17,6 +13,26 @@
         //// Init Winzard
         var option = getWinzardOption();
         $('#appointment-winzard').wizard(option);
+
+        //// Set active button pick time
+        $('.btn-time').click(function() {
+          if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).find('i').remove();
+          } else {
+            $(this).addClass('active');
+            $(this).append('<i class="icon wb-check" aria-hidden="true"></i>');
+          }
+        });
+
+        //// Selected NailTech
+        $('.cb-nailtech').click(function() {
+          if($(this).val() == 'Y') {
+            $('#nailtech-div').removeClass('d-none');
+          } else {
+            $('#nailtech-div').addClass('d-none');
+          }
+        });
     });
 })(document, window, jQuery);
 
@@ -38,6 +54,7 @@ function setUpDatePicker() {
 function truncateDate(date) {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate());
 }
+
 //// Get Option winzard
 function getWinzardOption() {
 
