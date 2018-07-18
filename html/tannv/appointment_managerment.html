@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../../assets/vendor/jquery-selective/jquery-selective.css">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
     <link rel="stylesheet" href="../../assets/vendor/select2/select2.css">
-    
+
     <link rel="stylesheet" href="../../assets/tannv/css/appointment-managerment.css">
 
 
@@ -1784,15 +1784,15 @@
                 <!-- End Steps -->
 
                 <!-- Wizard Content -->
-                <form id="exampleFormContainer">
+                <form id="frm-book-appointment">
                   <div class="wizard-content">
                     <div class="wizard-pane active" role="tabpanel">
                       <div class="row">
                         <div class="col-lg-6 col-12">
                           <h4 class="my-20 text-center">Select Date</h4>
                           <div class="select-date">
-                            <div id="inlineDatepicker" data-autoclose="false" data-date="06/30/2018"></div>
-                            <input type="hidden" id="inputHiddenInline" />
+                            <div id="date-picker" data-autoclose="false" data-date="07/17/2018"></div>
+                            <input type="hidden" id="date-picker-out" />
                           </div>
                         </div>
                         <div class="col-lg-6 col-12">
@@ -1841,10 +1841,10 @@
                             <div class="form-group">
                               <label class="form-control-label" for="inp-status">Status</label>
                               <select class="form-control" id="inp-status" name="status">
-                                <option>Checked In</option>
-                                <option>Confirmed</option>
-                                <option>Not Showed</option>
-                                <option>Cancelled</option>
+                                <option value="0">Checked In</option>
+                                <option value="1">Confirmed</option>
+                                <option value="2">Not Showed</option>
+                                <option value="3">Cancelled</option>
                               </select>
                             </div>
                           </div>
@@ -1853,13 +1853,21 @@
                           <div class="col-lg-6 col-12">
                             <div class="form-group">
                               <label class="form-control-label" for="inp-phone">Phone</label>
-                              <input type="text" class="form-control" id="inp-phone" name="phone" placeholder="Mobile phone">
+                              <input type="text" class="form-control" id="inp-phone"
+                              name="phone" placeholder="Mobile phone" data-plugin="formatter" data-pattern="([[999]]) [[999]] - [[9999]]">
                             </div>
                           </div>
                           <div class="col-lg-6 col-12">
                             <div class="form-group">
                               <label class="form-control-label" for="inp-email">Email</label>
                               <input type="text" class="form-control" id="inp-email" name="email" placeholder="Email">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="form-group text-center">
+                              <input type="hidden" name="hiddenCheck" id="hiddenCheck" />
                             </div>
                           </div>
                         </div>
@@ -1870,40 +1878,47 @@
                       <div class="row">
                         <div class="col-lg-4 col-12">
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-menicure" name="sv-menicure" autocomplete="off">
-                            <label for="sv-menicure">Manicure</label>
+                            <input type="checkbox" value="Manicure" class="chb-service" id="sv-manicure" name="sv-manicure" autocomplete="off">
+                            <label for="sv-manicure">Manicure</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-penicure" name="sv-penicure" autocomplete="off">
+                            <input type="checkbox" value="Penicure" class="chb-service" id="sv-penicure" name="sv-penicure" autocomplete="off">
                             <label for="sv-penicure">Penicure</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-manipeni-combo" name="sv-manipeni-combo" autocomplete="off">
+                            <input type="checkbox" value="Mani/Peni Combo" class="chb-service" id="sv-manipeni-combo" name="sv-manipeni-combo" autocomplete="off">
                             <label for="sv-manipeni-combo">Mani/Peni Combo</label>
                           </div>
                         </div>
                         <div class="col-lg-4 col-12">
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-gel-polish" name="sv-gel-polish" autocomplete="off">
+                            <input type="checkbox" value="Gel Polish" class="chb-service" id="sv-gel-polish" name="sv-gel-polish" autocomplete="off">
                             <label for="sv-gel-polish">Gel Polish</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-dipping" name="sv-dipping" autocomplete="off">
+                            <input type="checkbox" value="Dipping" class="chb-service" id="sv-dipping" name="sv-dipping" autocomplete="off">
                             <label for="sv-dipping">Dipping</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-acrylic" name="sv-acrylic" autocomplete="off">
+                            <input type="checkbox" value="Acrylic" class="chb-service" id="sv-acrylic" name="sv-acrylic" autocomplete="off">
                             <label for="sv-acrylic">Acrylic</label>
                           </div>
                         </div>
                         <div class="col-lg-4 col-12">
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-waxing" name="sv-waxing" autocomplete="off">
+                            <input type="checkbox" value="Waxing" class="chb-service" id="sv-waxing" name="sv-waxing" autocomplete="off">
                             <label for="sv-waxing">Waxing</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="sv-additional-service" name="sv-additional-service" autocomplete="off">
+                            <input type="checkbox" value="Additional Service" class="chb-service" id="sv-additional-service" name="sv-additional-service" autocomplete="off">
                             <label for="sv-additional-service">Additional Service</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="form-group text-center">
+                            <input type="hidden" name="hiddenService" id="hiddenService" />
                           </div>
                         </div>
                       </div>
@@ -1926,20 +1941,21 @@
                         <div class="col-lg-4 offset-lg-4 col-12">
                           <div class="form-group">
                             <label class="form-control-label" for="inp-nailtech">Nailtech work on date</label>
-                            <select class="form-control" data-plugin="select2" data-placeholder="Nailtech name"
+                            <select class="form-control" id="cb-nailtech" data-plugin="select2" data-placeholder="Nailtech name"
                               data-allow-clear="true">
                               <option></option>
-                              <optgroup label="Alaskan/Hawaiian Time Zone">
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Hawaii</option>
-                              </optgroup>
-                              <optgroup label="Pacific Time Zone">
-                                <option value="CA">California</option>
-                                <option value="NV">Nevada</option>
-                                <option value="OR">Oregon</option>
-                                <option value="WA">Washington</option>
-                              </optgroup>
+                              <option value="California">California</option>
+                              <option value="Nevada">Nevada</option>
+                              <option value="Oregon">Oregon</option>
+                              <option value="Washington">Washington</option>
                             </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="form-group text-center">
+                            <input type="hidden" name="hiddenNailtech" id="hiddenNailtech" />
                           </div>
                         </div>
                       </div>
@@ -1947,18 +1963,16 @@
 
                     <div class="wizard-pane div-confirm" role="tabpanel">
                       <div class="text-center my-20">
-                        <h4>Mary</h4>
-                        <h4>Thursday, 15/06/2018</h4>
-                        <h4>7:30</h4>
+                        <h4 id="p4-name">Mary</h4>
+                        <h4 id="p4-date">Thursday, 15/06/2018</h4>
+                        <h4 id="p4-time">7:30</h4>
                         <p>For:</p>
-                        <div class="service-list">
-                          <div class="sv-manicure">
+                        <div id="p4-service" class="service-list">
                             <button type="button" class="btn btn-primary waves-effect waves-round waves-light waves-effect waves-classic">Manicure</button>
                             <button type="button" class="btn btn-primary waves-effect waves-round waves-light waves-effect waves-classic">Pedicure</button>
                             <button type="button" class="btn btn-primary waves-effect waves-round waves-light waves-effect waves-classic">Gel Polish</button>
-                          </div>
                         </div>
-                        <div class="mt-20">Request: <span class="sp-nailtech">Christina</span></div>
+                        <div id="p4-div-nailtech" class="mt-20">Request: <span id="p4-nailtech" class="sp-nailtech">Christina</span></div>
                       </div>
                     </div>
                   </div>
@@ -1995,9 +2009,12 @@
     <script src="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script src="../../assets/vendor/bootstrap-touchspin/bootstrap-touchspin.min.js"></script>
     <script src="../../assets/vendor/bootbox/bootbox.js"></script>
+    <script src="../../assets/vendor/formvalidation/formValidation.js"></script>
+    <script src="../../assets/vendor/formvalidation/framework/bootstrap.js"></script>
     <script src="../../assets/vendor/jquery-wizard/jquery-wizard.js"></script>
     <script src="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script src="../../assets/vendor/select2/select2.full.min.js"></script>
+    <script src="../../assets/vendor/formatter/jquery.formatter.js"></script>
 
     <!-- Scripts -->
     <script src="../../assets/js/Component.js"></script>
@@ -2028,6 +2045,7 @@
     <script src="../../assets/js/Plugin/bootbox.js"></script>
     <script src="../../assets/js/App/Calendar.js"></script>
     <script src="../../assets/js/Plugin/jquery-wizard.js"></script>
+    <script src="../../assets/js/Plugin/formatter.js"></script>
 
     <script src="../../assets/tannv/js/appointment-managerment.js"></script>
   </body>
