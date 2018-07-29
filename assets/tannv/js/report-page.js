@@ -188,10 +188,13 @@ function setDataMonthChart() {
       clickable: true,
       // color: "green",
       // tickColor: "red",
-      backgroundColor: {
-        colors: ["#fcfdfe", "#fcfdfe"]
+      borderWidth: {
+        top: 0,
+        right: 0,
+        bottom: 2,
+        left: 2
       },
-      borderWidth: 0
+      borderColor: "#eef0f2"
       // borderColor: "#ff0000"
     },
     legend: {
