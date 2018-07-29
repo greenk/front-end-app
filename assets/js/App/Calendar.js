@@ -182,29 +182,29 @@
         var member = [{
           id: 'uid_1',
           name: 'Herman Beck',
-          avatar: '../../../../global/portraits/1.jpg'
+          avatar: '../../assets/portraits/1.jpg'
         }, {
           id: 'uid_2',
           name: 'Mary Adams',
-          avatar: '../../../../global/portraits/2.jpg'
+          avatar: '../../assets/portraits/2.jpg'
         }, {
           id: 'uid_3',
           name: 'Caleb Richards',
-          avatar: '../../../../global/portraits/3.jpg'
+          avatar: '../../assets/portraits/3.jpg'
         }, {
           id: 'uid_4',
           name: 'June Lane',
-          avatar: '../../../../global/portraits/4.jpg'
+          avatar: '../../assets/portraits/4.jpg'
         }];
 
         var items = [{
           id: 'uid_1',
           name: 'Herman Beck',
-          avatar: '../../../../global/portraits/1.jpg'
+          avatar: '../../assets/portraits/1.jpg'
         }, {
           id: 'uid_2',
           name: 'Caleb Richards',
-          avatar: '../../../../global/portraits/2.jpg'
+          avatar: '../../assets/portraits/2.jpg'
         }];
 
         $('.plugin-selective').selective({

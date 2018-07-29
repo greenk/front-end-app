@@ -438,16 +438,11 @@
     }], {
       series: {
         stack: true,
-        shadowSize: 0,
-        lines: {
-          show: false,
-          fill: true,
-          steps: false
-        },
         bars: {
-          show: true,
-          align: "center",
-          barWidth: 0.38
+            lineWidth: 0,
+            show: true,
+            align: 'center',
+            barWidth: 0.5
         }
       },
       colors: [Config.colors("light-green", 500), Config.colors("blue-grey", 300), Config.colors("primary", 500), Config.colors("purple", 500)],
