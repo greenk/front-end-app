@@ -81,18 +81,31 @@ function setDataDayChart() {
   };
 
   $.plot("#customer-in-day", data, options);
-
+  var previousPoint;
   $("#customer-in-day").bind("plothover", function (event, pos, item) {
       if (item) {
-          if (previousPoint != item.dataIndex) {
-              previousPoint = item.dataIndex;
+          previousPoint = item.dataIndex;
 
-              $("#tooltip").remove();
-              y = item.datapoint[1];
+          $("#tooltip").remove();
+          y = item.datapoint[1];
 
-              showTooltip(item.pageX, item.pageY,
-                  y + "");
-          }
+          showTooltip(item.pageX, item.pageY,
+              y + "");
+      } else {
+          $("#tooltip").remove();
+          previousPoint = null;
+      }
+  });
+
+  $("#customer-in-day").bind("plotclick", function (event, pos, item) {
+      if (item) {
+          previousPoint = item.dataIndex;
+
+          $("#tooltip").remove();
+          y = item.datapoint[1];
+
+          showTooltip(item.pageX, item.pageY,
+              y + "");
       } else {
           $("#tooltip").remove();
           previousPoint = null;
@@ -121,8 +134,6 @@ function setDataWeekChart() {
     "label": "Number of employee"
   }];
 
-  //var data = [[0, 0],[1, 38],[2, 52],[3, 78],[4, 84],[5, 0],[6, 0],[7, 0],[8, 0]];
-  //var dataset = [{ data: data, color: "#007bff" }];
   var ticks = [[1, "7/13"], [2, "7/14"], [3, "7/15"], [4, "7/16"],[5, "7/17"], [6, "7/18"], [7, "7/19"], [8, "7/20"]];
 
   var options = {
@@ -185,16 +196,26 @@ function setDataWeekChart() {
 
   $("#customer-in-week").bind("plothover", function (event, pos, item) {
       if (item) {
-          if (previousPoint != item.dataIndex) {
+          previousPoint = item.dataIndex;
+          $("#tooltip").remove();
+          y = item.datapoint[1];
 
-              previousPoint = item.dataIndex;
+          showTooltip(item.pageX, item.pageY,
+              y + "");
+      } else {
+          $("#tooltip").remove();
+          previousPoint = null;
+      }
+  });
 
-              $("#tooltip").remove();
-              y = item.datapoint[1];
+  $("#customer-in-week").bind("plotclick", function (event, pos, item) {
+      if (item) {
+          previousPoint = item.dataIndex;
+          $("#tooltip").remove();
+          y = item.datapoint[1];
 
-              showTooltip(item.pageX, item.pageY,
-                  y + "");
-          }
+          showTooltip(item.pageX, item.pageY,
+              y + "");
       } else {
           $("#tooltip").remove();
           previousPoint = null;
@@ -249,11 +270,8 @@ function setDataMonthChart() {
     },
     colors: [Config.colors("primary", 400)],
     grid: {
-      // show: true,
       hoverable: true,
       clickable: true,
-      // color: "green",
-      // tickColor: "red",
       borderWidth: {
         top: 0,
         right: 0,
@@ -272,16 +290,26 @@ function setDataMonthChart() {
 
   $("#customer-in-month").bind("plothover", function (event, pos, item) {
       if (item) {
-          if (previousPoint != item.dataIndex) {
+        previousPoint = item.dataIndex;
+        $("#tooltip").remove();
+        y = item.datapoint[1];
 
-              previousPoint = item.dataIndex;
+        showTooltip(item.pageX, item.pageY,
+            y + "");
+      } else {
+        $("#tooltip").remove();
+        previousPoint = null;
+      }
+  });
 
-              $("#tooltip").remove();
-              y = item.datapoint[1];
+  $("#customer-in-month").bind("plothover", function (event, pos, item) {
+      if (item) {
+          previousPoint = item.dataIndex;
+          $("#tooltip").remove();
+          y = item.datapoint[1];
 
-              showTooltip(item.pageX, item.pageY,
-                  y + "");
-          }
+          showTooltip(item.pageX, item.pageY,
+              y + "");
       } else {
           $("#tooltip").remove();
           previousPoint = null;
