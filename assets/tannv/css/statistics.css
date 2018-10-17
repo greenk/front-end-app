@@ -1,0 +1,282 @@
+.panel-body {
+    padding-top: 0px;
+}
+.row-tab {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+.row-tab .nav-tabs {
+  background-color: #17b3a3;
+  height: 50px;
+  border-top-left-radius: .35rem;
+  border-top-right-radius: .35rem;
+}
+.row-tab .nav-tabs>li:first-child {
+  margin-left: 30px;
+}
+.row-tab .nav-tabs>li {
+  margin-top: 12px;
+}
+.row-tab .nav-tabs>li>a {
+  padding-top: 7px;
+  color: #fff;
+  font-size: 15px;
+}
+.row-tab .nav-tabs>li>a:hover, .row-tab .nav-tabs>li>a.active {
+  background-color: #fff;
+  color: #37474f !important;
+  font-weight: 500;
+}
+.row-tab .tab-content {
+  padding: 20px 30px;
+}
+.radio-custom {
+  margin-top: 7px;
+}
+.radio-custom>label::before {
+  border-width: 11px;
+  border: 1px solid #263238;
+}
+.radio-custom input[type=radio]:checked+label::before {
+  border-width: 11px;
+  border: 1px solid #263238;
+}
+.radio-custom input[type=radio]:checked+label {
+  font-weight: 500;
+  color: #37474f !important;
+}
+.radio-custom label::after {
+  top: 4px;
+  left: 4px;
+  border: 6px solid #263238;
+  border-radius: 100%;
+}
+.span-statistic {
+  color: #37474f;
+}
+.report-select>button, .report-select>button:focus, .report-select>button:active, .report-select>.btn-select,
+.report-select .btn-select:focus, .report-select .btn-select:active {
+  background-color: #f1f6f8;
+  border-color: #f2f6f9  !important;
+  color: #37474f !important;
+  font-weight: 500;
+}
+.report-select.show .dropdown-toggle {
+    box-shadow: none !important;
+}
+.select-date {
+  font-family: 'Font Awesome 5 Free', 'Roboto';
+  font-weight: 500;
+  background: #f1f6f8 !important;
+}
+.select-date.btn-group .dropdown-toggle .caret {
+  width: 10px;
+  height: 10px;
+  border: none;
+  font-family: 'Font Awesome 5 Free';
+}
+.select-date.btn-group .dropdown-toggle .caret:before {
+  content: "\f073";
+  position: absolute;
+  top: -10px;
+  right: -5px;
+}
+.report-select.btn-group .dropdown-menu li.selected>a, .report-select.btn-group .dropdown-menu li:hover>a {
+  background-color: #44d6c8;
+  color: #fff;
+}
+.select-date .dropdown-menu > li > a {
+  border-radius: 4px;
+  padding: 13px 31px 13px 9px;
+}
+.select-date.btn-group .dropdown-menu li.selected>a:after, .select-date.btn-group .dropdown-menu li:hover>a:after {
+  content: "\f073";
+  position: absolute;
+  right: 11px;
+}
+#category-chart-container,
+#customer-chart-container,
+#income-chart-container {
+  height: 280px;
+}
+.overview-panel, .customer-panel {
+  border: 1px solid #dce2ec;
+}
+.popular-service .panel-title>i {
+  color: #ffcd17;
+  font-size: 21px;
+}
+.unpopular-service .panel-title>i {
+  color: #ff4c52;
+  font-size: 21px;
+}
+.overview-panel table>tbody {
+  color: #202e34;
+}
+.overview-panel table>tbody tr>td {
+  height: 61px;
+  vertical-align: middle;
+}
+.overview-panel table>thead tr>td {
+  height: 50px;
+  vertical-align: middle;
+}
+.overview-panel table tr>td:nth-child(1) {
+  width: 8%;
+}
+.overview-panel table tr>td:nth-child(3) {
+  width: 12%;
+}
+.overview-panel table tr>td:nth-child(4) {
+  width: 20%;
+}
+.badge-popular {
+  background-color: #44d6c8;
+  color: #fff;
+}
+.badge-unpopular {
+  background-color: #ff4c52;
+  color: #fff;
+}
+.detail-info-div>table {
+  border: 1px solid #dce2ec;
+  border-bottom-left-radius: 2px;
+}
+.detail-info-div>table tr>td {
+  height: 45px;
+  vertical-align: middle;
+}
+.detail-info-div>table>tbody, .detail-info-div>table>tfoot {
+  color: #202e34;
+}
+.detail-info-div>table>tbody>tr>td:nth-child(2) {
+  color: #29c3d8;
+}
+.detail-info-div>table>tfoot>tr>td>div button{
+  padding: 10px;
+  float: left;
+  display: block;
+  margin-right: 10px;
+}
+.detail-info-div>table>tfoot>tr>td>div button>i{
+  font-size: 25px;
+  color: #44d6c8;
+}
+.detail-add {
+  color: #a2abb3;
+}
+.detail-info-div>table>tfoot tr>td {
+  height: 80px;
+  vertical-align: middle;
+}
+.card-statistic {
+  border: 1px solid #dce2ec;
+  border-radius: 5px;
+}
+.card-text {
+  color: #37474f;
+  font-weight: 500;
+}
+.card-text>.icon-user {
+  color: #3e8ef7;
+}
+.card-text>.icon-heart {
+  color: #ff4c52;
+}
+.short-name {
+  border-radius: 1000px;
+  background-color: #54cbe3;
+  color: #fff;
+  margin-right: 7px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+}
+.review-icon {
+  color: #ffcd17;
+  font-size: 16px;
+}
+.customer-panel table>tbody {
+  color: #202e34;
+}
+.customer-panel table>tbody tr>td {
+  height: 55px;
+  vertical-align: middle;
+}
+.customer-panel table>thead tr>td {
+  height: 45px;
+  vertical-align: middle;
+}
+.badge-satisfy {
+  background-color: #ff4c52;
+  color: #fff;
+  padding: 0px 4px 0px 3px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 7px;
+}
+.counter-number-cur {
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: super;
+}
+.counter-number-text {
+  font-size: 25px;
+  color: #37474f;
+  font-weight: 600;
+}
+.icon-credit-card {
+  color: #3e8ef7;
+}
+.icon-cash {
+  color: #17b3a3;
+}
+.icon-receipt {
+  color: #ff9802;
+}
+.icon-gift {
+  color: #F44337;
+}
+.card-tip-overview {
+  background-color: #f3f7f9;
+  border-radius: 5px;
+}
+.tip-counter {
+  color: #37474f;
+}
+.avatar {
+  width: 30px;
+}
+.income-table-div>table {
+  border: 1px solid #dce2ec;
+  border-bottom-left-radius: 2px;
+}
+.income-table-div>table>tbody>tr>td{
+  height: 50px;
+  vertical-align: middle;
+  color: #37474f;
+}
+.sp-name {
+  display: inline-block;
+  line-height: 30px;
+}
+.modal-sidebar>.modal-content {
+  height: 100%;
+}
+.modal-sidebar>.modal-content .service-head{
+  background: #54CBE3;
+  color: #fff !important;
+  padding: 20px;
+}
+.modal-sidebar>.modal-content .service-head>h2{
+  color: #fff !important;
+}
+.badge-detail {
+  background-color: #E4EAEC;
+}
+.color-hightlight {
+  color: #37474f;
+}
