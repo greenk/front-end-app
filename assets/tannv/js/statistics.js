@@ -12,8 +12,44 @@
         $('#service-detail tbody').on( 'click', 'tr', function () {
            $('#serviceDetailModal').modal('show');
         });
+
+        // Handle time select
+        $("#time-category").change(function() {
+          loadTimeRadio('time-category', 'category');
+        });
+
+        $("#time-customer").change(function() {
+          loadTimeRadio('time-customer', 'customer');
+        });
+
+        $("#time-income").change(function() {
+          loadTimeRadio('time-income', 'income');
+        });
     });
 })(document, window, jQuery);
+
+function loadTimeRadio(comboTimeId, type) {
+  var $time = $('#' + comboTimeId).val();
+  var $html = '<div class="d-block float-left mr-15">' +
+            '<div class="radio-custom">'+
+              '<input type="radio" name="radio-'+type+'" id="'+$time+'-'+type+'1" />' +
+              '<label for="'+$time+'-'+type+'1">Last '+($time==='year'?'1 ':'4 ')+ $time +'s</label>' +
+            '</div>' +
+          '</div>' +
+          '<div class="d-block float-left mr-15">' +
+            '<div class="radio-custom">' +
+              '<input type="radio" name="radio-'+type+'" id="'+$time+'-'+type+'2" checked="checked"/>' +
+              '<label for="'+$time+'-'+type+'2">Last '+($time==='year'?'2 ':'8 ')+ $time +'s</label>' +
+            '</div>' +
+          '</div>' +
+          '<div class="d-block float-left">' +
+            '<div class="radio-custom">' +
+              '<input type="radio" name="radio-'+type+'" id="'+$time+'-'+type+'3" />' +
+              '<label for="'+$time+'-'+type+'3">Last '+($time==='year'?'3 ':'12 ')+ $time +'s</label>' +
+            '</div>' +
+          '</div>';
+    $('#'+ comboTimeId +'-div').html($html);
+}
 
 function setCategoryChart() {
   var weekChartData = {

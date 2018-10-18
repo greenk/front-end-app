@@ -32,9 +32,8 @@
 
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="../../assets/custom-vendor/font-awesome-5/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/fonts/web-icons/web-icons.min.css">
-    <link rel="stylesheet" href="../../assets/fonts/brand-icons/brand-icons.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-design/material-design.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
     <!--[if lt IE 9]>
@@ -1633,28 +1632,30 @@
                           </select>
                         </div>
                         <div class="col-md-2">
-                          <select class="form-control report-select" data-plugin="selectpicker">
-                            <option>Week</option>
-                            <option>Month</option>
-                            <option>Year</option>
+                          <select class="form-control report-select" id="time-category" data-plugin="selectpicker">
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
                           </select>
                         </div>
-                        <div class="col-md-2 px-0 ml-10">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value1" />
-                            <label for="value1">Last 4 weeks</label>
+                        <div class="col-md-8" id="time-category-div">
+                          <div class="d-block float-left mr-15">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-category" id="week-category1" />
+                              <label for="week-category1">Last 4 weeks</label>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-md-2 px-0">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value2" checked="checked"/>
-                            <label for="value2">Last 8 weeks</label>
+                          <div class="d-block float-left mr-15">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-category" id="week-category2" checked="checked"/>
+                              <label for="week-category2">Last 8 weeks</label>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-md-2 px-0">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value3" />
-                            <label for="value3">Last 12 weeks</label>
+                          <div class="d-block float-left">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-category" id="week-category3" />
+                              <label for="week-category3">Last 12 weeks</label>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1665,7 +1666,7 @@
                           <div class="float-left position-relative selectdiv">
                             <select class="form-control report-select select-date"
                             data-plugin="selectpicker">
-                              <option>12 Sep, 2018 &nbsp;  &#xf061; &nbsp;  19 Sep, 2018</option>
+                              <option>12 Sep, 2018 &nbsp;  &#xf178; &nbsp;  19 Sep, 2018</option>
                               <option>xx Sep, 2018 &nbsp;  &#xf178; &nbsp;  xx Sep, 2018</option>
                               <option>xx Sep, 2018 &nbsp;  &#xf178; &nbsp;  xx Sep, 2018</option>
                               <option>xx Sep, 2018 &nbsp;  &#xf178; &nbsp;  xx Sep, 2018</option>
@@ -1912,28 +1913,30 @@
                     <div class="tab-pane" id="customersTab" role="tabpanel">
                       <div class="row">
                         <div class="col-md-2">
-                          <select class="form-control report-select" data-plugin="selectpicker">
-                            <option>Week</option>
-                            <option>Month</option>
-                            <option>Year</option>
+                          <select class="form-control report-select" id="time-customer" data-plugin="selectpicker">
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
                           </select>
                         </div>
-                        <div class="col-md-2 px-0 ml-10">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value1" />
-                            <label for="value1">Last 4 weeks</label>
+                        <div class="col-md-8" id="time-customer-div">
+                          <div class="d-block float-left mr-15">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-customer" id="week-customer1" />
+                              <label for="week-customer1">Last 4 weeks</label>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-md-2 px-0">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value2" checked="checked"/>
-                            <label for="value2">Last 8 weeks</label>
+                          <div class="d-block float-left mr-15">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-customer" id="week-customer2" checked="checked"/>
+                              <label for="week-customer2">Last 8 weeks</label>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-md-2 px-0">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value3" />
-                            <label for="value3">Last 12 weeks</label>
+                          <div class="d-block float-left">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-customer" id="week-customer3" />
+                              <label for="week-customer3">Last 12 weeks</label>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2249,28 +2252,30 @@
                     <div class="tab-pane" id="incomesTab" role="tabpanel">
                       <div class="row">
                         <div class="col-md-2">
-                          <select class="form-control report-select" data-plugin="selectpicker">
-                            <option>Week</option>
-                            <option>Month</option>
-                            <option>Year</option>
+                          <select class="form-control report-select" id="time-income" data-plugin="selectpicker">
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
                           </select>
                         </div>
-                        <div class="col-md-2 px-0 ml-10">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value1" />
-                            <label for="value1">Last 4 weeks</label>
+                        <div class="col-md-8" id="time-income-div">
+                          <div class="d-block float-left mr-15">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-income" id="week-income1" />
+                              <label for="week-income1">Last 4 weeks</label>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-md-2 px-0">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value2" checked="checked"/>
-                            <label for="value2">Last 8 weeks</label>
+                          <div class="d-block float-left mr-15">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-income" id="week-income2" checked="checked"/>
+                              <label for="week-income2">Last 8 weeks</label>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-md-2 px-0">
-                          <div class="radio-custom">
-                            <input type="radio" name="radioCompare" id="value3" />
-                            <label for="value3">Last 12 weeks</label>
+                          <div class="d-block float-left">
+                            <div class="radio-custom">
+                              <input type="radio" name="radio-income" id="week-income3" />
+                              <label for="week-income3">Last 12 weeks</label>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2322,7 +2327,7 @@
                         <div class="col-md-3 col-6">
                           <div class="card card-block px-30 py-15 card-statistic">
                             <div class="card-text font-size-18 text-center mb-20">
-                              <span class="fas fa-money-bill mr-5 icon-cash"></span>
+                              <span class="fa fa-money mr-5 icon-cash"></span>
                               <span class="m-0">Cash</span>
                             </div>
                             <div class="counter-number text-center">
@@ -2334,7 +2339,7 @@
                         <div class="col-md-3 col-6">
                           <div class="card card-block px-30 py-15 card-statistic">
                             <div class="card-text font-size-18 text-center mb-20">
-                              <span class="fas fa-receipt mr-5 icon-receipt"></span>
+                              <span class="fa fa-file-text-o mr-5 icon-receipt"></span>
                               <span class="m-0">Check</span>
                             </div>
                             <div class="counter-number text-center">

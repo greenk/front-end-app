@@ -65,7 +65,7 @@
     box-shadow: none !important;
 }
 .select-date {
-  font-family: 'Font Awesome 5 Free', 'Roboto';
+  font-family: 'Font Awesome', 'Roboto';
   font-weight: 500;
   background: #f1f6f8 !important;
 }
@@ -73,7 +73,7 @@
   width: 10px;
   height: 10px;
   border: none;
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome';
 }
 .select-date.btn-group .dropdown-toggle .caret:before {
   content: "\f073";
@@ -149,11 +149,14 @@
 .detail-info-div>table>tbody, .detail-info-div>table>tfoot {
   color: #202e34;
 }
+.detail-info-div>table>tbody>tr:hover {
+  cursor: pointer;
+}
 .detail-info-div>table>tbody>tr>td:nth-child(2) {
   color: #29c3d8;
 }
 .detail-info-div>table>tfoot>tr>td>div button{
-  padding: 10px;
+  padding: 14px 11px 10px 11px;
   float: left;
   display: block;
   margin-right: 10px;
@@ -239,6 +242,7 @@
 }
 .icon-gift {
   color: #F44337;
+  font-size: 20px;
 }
 .card-tip-overview {
   background-color: #f3f7f9;
