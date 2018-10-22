@@ -1,0 +1,224 @@
+.panel-aside > .panel-heading {
+  background-color: #0d69e3;
+  position: relative;
+}
+.short-name {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 500;
+  color: #0d69e3;
+  line-height: 60px;
+}
+.panel-action {
+  position: absolute;
+  top: 7px;
+  z-index: 1;
+}
+.panel-action > a {
+  color: #fff;
+  font-size: 18px;
+}
+.action-left {
+  left: 20px;
+}
+.action-right {
+  right: 20px;
+}
+.color-contact {
+  color: #bed7f7;
+}
+.fa-rotate-270 {
+  transform: rotate(270deg) !important;
+}
+.font-size-15 {
+  font-size: 15px !important;
+}
+.float-div {
+  text-align: center;
+  width: 230px;
+  margin:0 auto;
+}
+.float-button {
+  background-color: #fff;
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  width: 110px;
+  border-radius: .286rem;
+  box-shadow: 0 3px 1px rgba(0,0,0,.05);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+}
+.float-button > p {
+  font-size: 13px;
+}
+.float-button > h4 {
+  color: #2F3347;
+}
+.rating>i {
+  margin-right: 5px !important;
+}
+.badge-left {
+  color: #48A8F9 !important;
+  background-color: transparent;
+  border-color: #48A8F9 !important;
+  font-size: 13px;
+  border-radius: 1000px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.tab-visit {
+  height: 184px;
+}
+.tab-visit>.tab-content {
+  height: 100% !important;
+}
+.tab-visit>.tab-content>.tab-pane {
+  height: 100% !important;
+  position: relative;
+}
+.tab-visit .nav-item {
+  margin-bottom: 10px !important;
+}
+.tab-visit .nav-link {
+  border: none;
+  padding: 0px 20px 0px 0px;
+  color: #75828E;
+}
+.tab-visit .nav-link:hover {
+  border-right: 3px solid #0EB1A0 !important;
+}
+.tab-visit .nav-link>div {
+  padding: 10px 20px;
+}
+.tab-visit .nav-link>div>p {
+  line-height: 40px;
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.tab-visit .nav-link>div>span {
+  color: #D5DCE1;
+  font-weight: 500;
+}
+.tab-visit .nav-link.active {
+  border-right: 3px solid #0EB1A0 !important;
+}
+.tab-visit .nav-link.active > div {
+  background-color: #F3F7F9;
+}
+.tab-visit .nav-link.active > div>p {
+  color: #263238;
+}
+.tab-visit .nav-link.active > div>span {
+  color: #89949C;
+}
+.table-visit tbody td {
+  line-height: 1;
+  border: none;
+  padding: 0;
+}
+.table-visit tr {
+  height: 30px;
+}
+.table-visit td:nth-of-type(odd) {
+  color: #37474f;
+  font-weight: 500;
+}
+.table-visit tfoot td {
+  padding-top: 15px;
+  padding-left: 0px;
+}
+.tab-visit>.tab-content>.tab-pane>.detail-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.tab-visit>.tab-content>.tab-pane>.detail-link>p> .icon {
+  font-size: 21px;
+  vertical-align: text-bottom;
+}
+.tab-visit>.tab-content>.tab-pane>.detail-link:hover {
+  text-decoration: none;
+}
+.table-customer-statistic {
+  border: 1px solid #e4eaec;
+}
+.table-customer-statistic>tbody>tr {
+  height: 47px;
+}
+.table-customer-statistic>tbody>tr>td{
+  color: #37474f;
+  vertical-align: middle;
+}
+.table-customer-statistic>tbody>tr>td:nth-child(2){
+  color: #1e88e5;
+}
+.badge-service {
+  background-color: #E4EAEC;
+}
+.modal-sidebar>.modal-content {
+    height: 100%;
+}
+.service-head {
+  text-align: center;
+  background-color: red;
+  display: block;
+  width: 151px;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+.service-group {
+  overflow: hidden;
+}
+.service-head>p{
+  margin: 0;
+  color: #fff;
+}
+.head-checkin {
+  background-color: #17B3A3;
+  padding-bottom: 15px;
+}
+.mb-7 {
+  margin-bottom: 7px !important;
+}
+.head-noofservice {
+  background-color: #0CB2D4;
+}
+.head-totalpay {
+  background-color: #3E8EF7;
+}
+.total-pay-cur {
+  font-size: 16px;
+  vertical-align: super;
+}
+.sidebar-table {
+  border: 1px solid #e4eaec;
+}
+.sidebar-table >tbody{
+  color: #263238;
+}
+.sidebar-table >tbody>tr>td {
+  height: 48px;
+  vertical-align: middle;
+}
+.table-service-detail {
+  border: 1px solid #e4eaec;
+}
+.table-service-detail>tbody p {
+  margin-bottom: 6px;
+}
+.table-service-detail>tbody>tr>td:nth-child(1) {
+  color: #263238;
+}
+.table-service-detail>tbody>tr>td>p:nth-child(1) {
+  color: #263238;
+  font-weight: 500;
+}
