@@ -226,3 +226,9 @@
   color: #263238;
   font-weight: 500;
 }
+.modal-sidebar button.close {
+    position: fixed;
+    top: 15px;
+    right: 40px;
+    z-index: 1;
+}
