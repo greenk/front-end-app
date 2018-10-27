@@ -1,0 +1,145 @@
+.color-hightlight {
+  color: #263238 !important;
+}
+.color-modal {
+  color: #2c3a4a;
+}
+.employee-working-list {
+  padding: 0;
+  list-style: none;
+}
+.employee-working-list > .working-item {
+  padding: 18px 20px;
+  display: block;
+  height: 72px;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.employee-working-list > .working-item:hover {
+  cursor: pointer;
+}
+.employee-working-list > .working-item:last-child{
+  border-bottom: none;
+}
+.employee-working-list > .working-item >span {
+  display: block;
+  float: left;
+}
+.employee-working-list > .working-item >span:last-child {
+  display: block;
+  float: right;
+}
+.working-number {
+  font-size: 32px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 36px;
+  padding-right: 20px;
+  border-right: 1px solid #d6dde8;
+  color: #17b3a3;
+}
+.working-avatar {
+  margin-left: 20px;
+  width: 48px;
+  margin-top: -6px;
+}
+.working-name {
+  margin-left: 12px;
+}
+.working-name > p:first-child {
+  color: #263238;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  line-height: 14px;
+}
+.working-name > p:last-child {
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+}
+.checkin-hour {
+  display: inline-block;
+  line-height: 36px;
+}
+.not-checkin-search .form-control {
+  height: 44px;
+  border-radius: 4px;
+  border: solid 1px #ccd5db;
+}
+.mt-18 {
+  margin-top: 18px;
+}
+.employee-not-checkin {
+  padding: 0;
+  list-style: none;
+}
+.employee-not-checkin > .not-checkin-item {
+  padding: 9px 30px;
+  display: block;
+  height: 54px;
+  background-color: #ffffff;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+.employee-not-checkin > .not-checkin-item:hover,
+.employee-not-checkin > .not-checkin-item:active,
+.employee-not-checkin > .not-checkin-item:focus,
+.employee-not-checkin > .not-checkin-item.active {
+  cursor: pointer;
+  background-color: #f3f7f9;
+}
+.employee-not-checkin > .not-checkin-item > span {
+  float: left;
+  display: block;
+}
+.employee-not-checkin > .not-checkin-item > span:last-child {
+  float: right;
+}
+.not-checkin-avatar {
+  width: 36px;
+}
+.not-checkin-name {
+  margin-left: 12px;
+}
+.not-checkin-name > p:first-child {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  line-height: 14px;
+}
+.not-checkin-name > p:last-child {
+  margin-bottom: 0px;
+  line-height: 12px;
+  font-size: 12px;
+  color: #ccd5db;
+}
+.not-checkin-item > .icon {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+.modal-checkin .modal-body {
+  padding: 60px 30px;
+  text-align: center;
+}
+.checkin-input > input, .checkin-input > input:active{
+  height: 54px;
+  border-radius: 8px !important;
+  box-shadow: 0 0 5px 0 rgba(23, 179, 163, 0.43);
+  border: solid 1px #ccd5db;
+  background-color: #ffffff;
+  padding: 8px 20px;
+  font-size: 32px;
+  color: #263238 !important;
+  font-weight: 400 !important;
+}
+.input-search-icon-right {
+  right: 10px !important;
+  left: auto !important;
+  color: #17b3a3 !important;
+}
+@media (min-width: 768px) {
+  .modal-360 {
+      width: 360px !important;
+  }
+}
