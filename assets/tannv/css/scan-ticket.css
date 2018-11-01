@@ -1,0 +1,41 @@
+.spn-title {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3a4a;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.checkin-input {
+  max-width: 310px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.checkin-input > input, .checkin-input > input:focus{
+  height: 54px;
+  border-radius: 8px !important;
+  box-shadow: 0 0 5px 0 rgba(23, 179, 163, 0.43);
+  border: solid 1px #ccd5db;
+  background-color: #ffffff;
+  padding: 8px 50px 8px 30px;
+  font-size: 32px;
+  color: #263238 !important;
+  font-weight: 400 !important;
+}
+.input-search-icon-right {
+  right: 24px !important;
+  left: auto !important;
+  color: #ccd5db !important;
+}
+.checkin-input > input:focus + .input-search-icon-right {
+  color: #17b3a3 !important;
+}
+.checkin-note {
+  text-align: center;
+  font-size: 16px;
+  max-width: 360px;
+  line-height: 1.5;
+  margin: 0px auto 18px;
+}
