@@ -1,0 +1,286 @@
+.nn-color-black {
+  color: #263238;
+}
+.nn-color-opaque {
+  color: #ccd5db;
+}
+.nn-line-through {
+  text-decoration: line-through;
+}
+.nn-card-primary{
+  background-color: #44d6c8;
+  color: #fff;
+}
+.font-size-13 {
+  font-size: 13px !important;
+}
+.nn-card-default {
+  background-color: #f3f7f9;
+}
+.nn-card {
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.nn-card .counter-label {
+  opacity: 0.8;
+  line-height: 14px;
+  margin-bottom: 5px;
+}
+.nn-card .counter-number {
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: bold;
+}
+.nn-card-primary .card-watermark {
+  font-size: 63px;
+  top: 5px;
+  transform: rotate(45deg);
+  right: 20px;
+  opacity: 0.2;
+}
+.nn-card-default .counter-label {
+  color: #76838f;
+}
+.nn-card-default .counter-number {
+  color: #263238;
+  font-size: 18px;
+  font-weight: 500;
+}
+.nn-card-default .card-watermark {
+  font-size: 44px;
+  top: 15px;
+  right: 20px;
+  opacity: 0.2;
+  color: #02bcd4;
+}
+.btn-outline.nn-btn-primary {
+  border: solid 1px #17b3a3;
+  background-color: #ffffff;
+  color: #17b3a3;
+  padding: 9px;
+}
+.btn-outline.nn-btn-primary:hover, .btn-outline.nn-btn-primary:focus, .btn-outline.nn-btn-primary:active, .btn-outline.nn-btn-primary:visited {
+  background-color: #44d6c8;
+  border-color: #44d6c8;
+  color: #fff;
+  box-shadow: none;
+}
+.nn-checkout-table {
+  border: 1px solid #d6dde8;
+  border-radius: 4px;
+}
+.nn-checkout-table td {
+  vertical-align: middle;
+}
+.nn-checkout-table tr>td:first-child {
+  width: 60%;
+  padding-left: 20px;
+}
+.nn-checkout-table>thead>tr {
+  height: 42px;
+}
+.nn-checkout-table>tbody>.group-row {
+  height: 64px;
+  background-color: rgba(243, 247, 249, 0.5);
+  font-size: 16px;
+}
+.nn-checkout-table>tbody>.child-row {
+  height: 93px;
+  font-size: 16px;
+}
+.nn-checkout-table>tbody>.child-row>td:first-child {
+  padding-left: 40px;
+}
+.nn-checkout-table>tbody>.child-row .avatar {
+  width: 30px;
+  height: 30px;
+}
+.nn-checkout-table>tbody>.child-row .sp-name {
+  font-size: 14px;
+  line-height: 30px;
+}
+.nn-checkout-table>tbody>.child-row .sp-exchange {
+  font-size: 12px;
+  line-height: 30px;
+  color: #ccd5db;
+}
+.nn-service-table > tbody {
+  border-top: 1px solid #ccd5db;
+  border-bottom: 1px solid #ccd5db;
+  font-size: 13px;
+}
+.nn-service-table tr >td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.nn-service-table tr:first-child > td {
+  padding-top: 15px;
+}
+.nn-service-table .nn-coupon-row {
+  color: #17b3a3;
+}
+.nn-service-table tr:last-child > td {
+  padding-bottom: 15px;
+}
+.nn-service-table td:first-child {
+  border: none;
+  padding-left: 0;
+  width: 70%;
+}
+.nn-service-table td:last-child {
+  border: none;
+  padding-right: 0;
+}
+.nn-btn-save {
+  width: 100%;
+  height: 44px;
+  border: solid 1px #17b3a3;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  color: #17b3a3;
+}
+.nn-btn-save:hover {
+  background-color: #44d6c8;
+  border-color: #44d6c8;
+  color: #fff;
+}
+
+/********** Modal Add Service *****************/
+#addServiceModal .modal-content{
+  height: 100%;
+}
+#addServiceModal .modal-header > h4 {
+  font-size: 26px;
+  color: #263238;
+  font-weight: 500;
+}
+#addServiceModal .modal-header > button {
+  top: 20px;
+  right: 50px;
+}
+#addServiceModal .service-head {
+  width: 50%;
+  float: left;
+}
+#addServiceModal .service-head:first-child>.nn-card {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 72px;
+  background-color: #17b3a3;
+  margin-bottom: 0;
+}
+#addServiceModal .service-head:first-child>.nn-card> .card-number>.badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  color: #44d6c8;
+  font-size: 20px;
+  line-height: 32px;
+  padding: 0;
+  margin-right: 15px;
+}
+#addServiceModal .service-head:first-child>.nn-card> .counter>.counter-label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 7px;
+  color: #fff;
+  opacity: 1;
+}
+#addServiceModal .service-head:first-child>.nn-card> .counter>.counter-number {
+  font-size: 14px;
+  opacity: 0.8;
+  font-weight: normal;
+  line-height: 14px;
+  color: #fff;
+}
+#addServiceModal .service-head:last-child>.nn-card {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  height: 72px;
+  background-color: #f3f7f9;
+  margin-bottom: 0;
+}
+#addServiceModal .service-head:last-child>.nn-card> .card-number>.badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  color: #fff;
+  background-color: #ccd5db;
+  font-size: 20px;
+  line-height: 32px;
+  padding: 0;
+  margin-right: 15px;
+}
+#addServiceModal .service-head:last-child>.nn-card> .counter>.counter-label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 7px;
+  color: #ccd5db;
+  opacity: 1;
+}
+#addServiceModal .service-head:last-child>.nn-card> .counter>.counter-number {
+  font-size: 14px;
+  opacity: 0.8;
+  font-weight: normal;
+  line-height: 14px;
+  color: #ccd5db;
+}
+#addServiceModal .nn-title > .icon {
+  float: left;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  margin-right: 10px;
+}
+#addServiceModal .nn-btn-modal {
+  height: 44px;
+  font-size: 16px;
+  width: 84px;
+}
+#addServiceModal .nn-btn-default {
+  background-color: #f3f7f9;
+  color: #76838f;
+}
+#addServiceModal .nn-btn-primary {
+  border: solid 1px #17b3a3;
+  background-color: #18bbad;
+  color: #fff;
+}
+#addServiceModal .nn-content > .nn-list-order{
+  padding: 0;
+  list-style: none;
+  border-bottom: solid 1px #d6dde8;
+  border-radius: 4px;
+}
+#addServiceModal .nn-content > .nn-list-order> .nn-item {
+  height: 48px;
+  border-top: solid 1px #d6dde8;
+  border-left: solid 1px #d6dde8;
+  border-right: solid 1px #d6dde8;
+  color: #263238;
+  line-height: 48px;
+}
+#addServiceModal .nn-content > .nn-list-order> .nn-item > span {
+  display: inline-block;
+}
+#addServiceModal .nn-content > .nn-list-order> .nn-item > .nn-num {
+  width: 10%;
+  text-align: center;
+}
+#addServiceModal .nn-content > .nn-list-order> .nn-item > .nn-name {
+  width: 62%;
+}
+#addServiceModal .nn-content > .nn-list-order> .nn-item > .nn-price {
+  width: 15%;
+}
+#addServiceModal .nn-content > .nn-list-order> .nn-item > .nn-tick {
+  width: 10%;
+  text-align: center;
+  font-size: 16px;
+  color: #17b3a3;
+}
