@@ -1678,6 +1678,21 @@
                           <span class="icon fa-pencil"></span>
                         </td>
                       </tr>
+                      <tr class="child-row">
+                        <td>
+                          <p class="mb-10 nn-color-black font-weight-bold">"Love Me Tender" Spa Pedicure</p>
+                          <p class="m-0">
+                            <a class="sp-link" href="#" id="btn-add-employee">+ Add employee</a>
+                          </p>
+                        </td>
+                        <td class="text-center">
+                          <p class="m-0 nn-color-black">$45.00</p>
+                          <p class="m-0 font-size-14 nn-line-through nn-color-opaque">$50.00</p>
+                        </td>
+                        <td class="text-center">
+                          <span class="icon fa-pencil"></span>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -1727,6 +1742,8 @@
             <button type="button" class="btn btn-outline nn-btn-save">Save & Continue</button>
 
             <p class="mt-15 text-center px-30 font-size-13">All services need to be assigned to employees before check-out</p>
+
+            <button type="button" class="btn nn-btn-check-out">Check-out</button>
           </div>
         </div>
       </div>
@@ -1745,8 +1762,8 @@
             </button>
             <h4 class="modal-title">Add Service</h4>
           </div>
-          <div class="modal-body pt-0 px-30">
-            <div class="clearfix mb-30">
+          <div class="modal-frozen px-30 pt-10 pb-10">
+            <div class="clearfix mb-15">
               <div class="service-head">
                 <div class="card flex-row py-20 px-30 nn-card-primary nn-card">
                   <div class="card-number">
@@ -1778,40 +1795,275 @@
                 <p class="m-0 font-size-12">Manicure</p>
               </div>
             </div>
-
+          </div>
+          <div class="modal-body pt-0 px-30">
             <div class="nn-content mt-15">
               <ul class="nn-list-order">
-                <li class="nn-item">
+                <li class="nn-item active">
                   <span class="nn-num">1</span>
                   <span class="nn-name">Manicure</span>
-                  <span class="nn-price font-weight-bold">$20.00</span>
+                  <span class="nn-price font-weight-bold"></span>
                   <span class="nn-tick icon wb-check d-none"></span>
                 </li>
                 <li class="nn-item">
                   <span class="nn-num">1</span>
                   <span class="nn-name">Manicure</span>
-                  <span class="nn-price font-weight-bold">$20.00</span>
+                  <span class="nn-price font-weight-bold"></span>
                   <span class="nn-tick icon wb-check d-none"></span>
                 </li>
                 <li class="nn-item">
                   <span class="nn-num">1</span>
                   <span class="nn-name">Manicure</span>
-                  <span class="nn-price font-weight-bold">$20.00</span>
-                  <span class="nn-tick icon wb-check"></span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
                 </li>
                 <li class="nn-item">
                   <span class="nn-num">1</span>
                   <span class="nn-name">Manicure</span>
-                  <span class="nn-price font-weight-bold">$20.00</span>
-                  <span class="nn-tick icon wb-check"></span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
+                </li>
+                <li class="nn-item">
+                  <span class="nn-num">1</span>
+                  <span class="nn-name">Manicure</span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
+                </li>
+                <li class="nn-item">
+                  <span class="nn-num">1</span>
+                  <span class="nn-name">Manicure</span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
+                </li>
+                <li class="nn-item">
+                  <span class="nn-num">1</span>
+                  <span class="nn-name">Manicure</span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
+                </li>
+                <li class="nn-item">
+                  <span class="nn-num">1</span>
+                  <span class="nn-name">Manicure</span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
+                </li>
+                <li class="nn-item">
+                  <span class="nn-num">1</span>
+                  <span class="nn-name">Manicure</span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
+                </li>
+                <li class="nn-item">
+                  <span class="nn-num">1</span>
+                  <span class="nn-name">Manicure</span>
+                  <span class="nn-price font-weight-bold"></span>
+                  <span class="nn-tick icon wb-check d-none"></span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="modal-footer px-30">
+          <div class="modal-footer px-30 pt-20">
             <button type="button" class="btn nn-btn-modal nn-btn-default mr-auto" data-dismiss="modal">Cancel</button>
             <button type="button" class="btn nn-btn-modal nn-btn-primary">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="addEmployeeModal" aria-hidden="true" aria-labelledby="addEmployeeModal"
+      role="dialog" tabindex="-1">
+      <div class="modal-dialog modal-sidebar modal-lg">
+        <div class="modal-content">
+          <div class="modal-header pt-20 px-30 pb-20">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Add Service</h4>
+          </div>
+          <div class="modal-frozen px-30 pt-10 pb-10">
+            <div class="clearfix mb-15">
+              <div class="service-head">
+                <div class="card flex-row py-20 px-30 nn-card-primary nn-card">
+                  <div class="card-number">
+                    <span class="badge badge-round">1</span>
+                  </div>
+                  <div class="counter counter-md text-left">
+                    <div class="counter-label">Services</div>
+                    <div class="counter-number">Add Service</div>
+                  </div>
+                </div>
+              </div>
+              <div class="service-head">
+                <div class="card flex-row py-20 px-30 nn-card-primary nn-card">
+                  <div class="card-number">
+                    <span class="badge badge-round">2</span>
+                  </div>
+                  <div class="counter counter-md text-left">
+                    <div class="counter-label">Employee</div>
+                    <div class="counter-number">Select employee</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-search not-checkin-search mb-15">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" id="inp-search-box" class="form-control" name="" placeholder="Search by name or Scan employee ID">
+              <button type="button" id="btn-clear-search" class="input-search-close icon wb-close d-none" aria-label="Close"></button>
+            </div>
+
+            <div class="nn-title m-0 clearfix">
+              <div class="float-left mr-10">
+                <p class="m-0 font-size-13 font-weight-500 nn-color-black">Selected Employee:</p>
+              </div>
+              <div class="float-left" id="selected-emp-div">
+                <p class="mb-0 mr-10 float-left">
+                  <span class="font-size-13 mr-5">Stepan Assonov</span>
+                  <span class="icon fa-times-circle-o font-size-16 nn-clear-selected"></span>
+                </p>
+                <p class="mb-0 mr-10 float-left">
+                  <span class="font-size-13 mr-5">Stepan Assonov</span>
+                  <span class="icon fa-times-circle-o font-size-16 nn-clear-selected"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body pt-0 px-30">
+            <div class="nn-content mt-10">
+              <div class="row" data-plugin="matchHeight" data-by-row="true">
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp active">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nn-col col-md-4 col-xs-6">
+                  <div class="card card-shadow text-center nn-card-emp">
+                    <div class="vertical-align px-0">
+                      <div class="vertical-align-bottom w-full">
+                        <span class="avatar">
+                          <img src="../../assets/portraits/21.jpg">
+                        </span>
+                        <p class="nn-color-black font-size-13 mb-5 mt-15 font-weight-500">Torsten Paulsson</p>
+                        <p class="font-size-12 mb-0">Torsten</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer px-30 pt-20">
+            <button type="button" class="btn nn-btn-modal nn-btn-default mr-auto" data-dismiss="modal">Back</button>
+            <button type="button" class="btn nn-btn-modal nn-btn-primary">Save</button>
           </div>
         </div>
       </div>
