@@ -1,3 +1,8 @@
+@media (min-width: 768px) {
+  .modal-lg {
+      width: 500px;
+  }
+}
 .nn-color-black {
   color: #263238;
 }
@@ -75,22 +80,18 @@
 }
 .nn-checkout-table tr>td:first-child {
   width: 60%;
-  padding-left: 20px;
 }
 .nn-checkout-table>thead>tr {
   height: 42px;
 }
 .nn-checkout-table>tbody>.group-row {
   height: 64px;
-  background-color: rgba(243, 247, 249, 0.5);
+  background-color: rgba(243, 247, 249, 0.5) !important;
   font-size: 16px;
 }
 .nn-checkout-table>tbody>.child-row {
   height: 93px;
   font-size: 16px;
-}
-.nn-checkout-table>tbody>.child-row>td:first-child {
-  padding-left: 40px;
 }
 .nn-checkout-table>tbody>.child-row .avatar {
   width: 30px;
@@ -259,6 +260,9 @@
   background-color: #18bbad;
   color: #fff;
 }
+#addServiceModal .nn-title > .icon:hover {
+  cursor: pointer;
+}
 #addServiceModal .nn-content > .nn-list-order{
   padding: 0;
   list-style: none;
@@ -374,4 +378,7 @@
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
+}
+.sp-exchange:hover, .sp-change-service:hover, .sp-remove:hover {
+  cursor: pointer;
 }

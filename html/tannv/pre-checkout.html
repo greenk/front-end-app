@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="../../assets/vendor/intro-js/introjs.css">
     <link rel="stylesheet" href="../../assets/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="../../assets/vendor/flag-icon-css/flag-icon.css">
-    <link rel="stylesheet" href="../../assets/tannv/css/custom.css">
     <link rel="stylesheet" href="../../assets/tannv/css/pre-checkout.css">
 
 
@@ -1635,14 +1634,14 @@
                     </thead>
                     <tbody>
                       <tr class="group-row">
-                        <td class="nn-color-black font-weight-bold">Combo Services</td>
+                        <td class="nn-color-black font-weight-bold pl-20">Combo Services</td>
                         <td class="text-center nn-color-black">$95.00</td>
                         <td class="text-center">
-                          <span class="icon fa-trash-o"></span>
+                          <span class="icon fa-trash-o sp-remove"></span>
                         </td>
                       </tr>
                       <tr class="child-row">
-                        <td>
+                        <td class="pl-40">
                           <p class="mb-10 nn-color-black font-weight-bold">"Soul Refresher" Spa Pedicure</p>
                           <p class="m-0">
                             <span class="avatar mr-10">
@@ -1656,11 +1655,11 @@
                           <p class="m-0 nn-color-black">$50.00</p>
                         </td>
                         <td class="text-center">
-                          <span class="icon fa-pencil"></span>
+                          <span class="icon fa-pencil sp-change-service"></span>
                         </td>
                       </tr>
                       <tr class="child-row">
-                        <td>
+                        <td class="pl-40">
                           <p class="mb-10 nn-color-black font-weight-bold">"Love Me Tender" Spa Pedicure</p>
                           <p class="m-0">
                             <span class="avatar mr-10">
@@ -1675,11 +1674,12 @@
                           <p class="m-0 font-size-14 nn-line-through nn-color-opaque">$50.00</p>
                         </td>
                         <td class="text-center">
-                          <span class="icon fa-pencil"></span>
+                          <span class="icon fa-pencil-square-o sp-change-service mr-10"></span>
+                          <span class="icon fa-trash-o sp-change-service"></span>
                         </td>
                       </tr>
                       <tr class="child-row">
-                        <td>
+                        <td class="pl-40">
                           <p class="mb-10 nn-color-black font-weight-bold">"Love Me Tender" Spa Pedicure</p>
                           <p class="m-0">
                             <a class="sp-link" href="#" id="btn-add-employee">+ Add employee</a>
@@ -1690,7 +1690,7 @@
                           <p class="m-0 font-size-14 nn-line-through nn-color-opaque">$50.00</p>
                         </td>
                         <td class="text-center">
-                          <span class="icon fa-pencil"></span>
+                          <span class="icon fa-pencil sp-change-service"></span>
                         </td>
                       </tr>
                     </tbody>
@@ -1789,16 +1789,16 @@
             </div>
 
             <div class="nn-title m-0 clearfix">
-              <span class="icon wb-arrow-left"></span>
+              <span class="icon wb-arrow-left" id="title-icon"></span>
               <div class="float-left">
-                <p class="m-0 font-size-18 font-weight-500 nn-color-black">Service</p>
-                <p class="m-0 font-size-12">Manicure</p>
+                <p class="m-0 font-size-18 font-weight-500 nn-color-black" id="title-name">Service</p>
+                <p class="m-0 font-size-12" id="title-category">Manicure</p>
               </div>
             </div>
           </div>
           <div class="modal-body pt-0 px-30">
             <div class="nn-content mt-15">
-              <ul class="nn-list-order">
+              <ul class="nn-list-order" id="list-order">
                 <li class="nn-item active">
                   <span class="nn-num">1</span>
                   <span class="nn-name">Manicure</span>
@@ -1865,7 +1865,7 @@
 
           <div class="modal-footer px-30 pt-20">
             <button type="button" class="btn nn-btn-modal nn-btn-default mr-auto" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn nn-btn-modal nn-btn-primary">Next</button>
+            <button type="button" id="btn-next" class="btn nn-btn-modal nn-btn-primary">Next</button>
           </div>
         </div>
       </div>
