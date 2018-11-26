@@ -9,6 +9,13 @@
         // Find info in https://github.com/sandywalker/webui-popover
         $('#btn-quick-tip').webuiPopover(tableSettings);
         $('#btn-quick-tip2').webuiPopover(tableSettings);
+
+        // Select type payment
+
+        $('.nn-card').click(function() {
+            $('.nn-card').removeClass('active');
+            $(this).addClass('active');
+        });
     });
 })(document, window, jQuery);
 

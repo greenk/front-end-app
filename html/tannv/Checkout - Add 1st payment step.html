@@ -1650,7 +1650,7 @@
                   </div>
                   <div class="row mx-7-s mb-15">
                     <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card-payment">
+                      <div class="card card-block nn-card nn-card-payment">
                         <div class="counter counter-lg vertical-align">
                           <div class="vertical-align-middle">
                             <span class="icon fa-credit-card icon-credit-card icon-payment"></span>
@@ -1660,7 +1660,7 @@
                       </div>
                     </div>
                     <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card-payment">
+                      <div class="card card-block nn-card nn-cash-payment">
                         <div class="counter counter-lg vertical-align">
                           <div class="vertical-align-middle">
                             <span class="icon fa-money icon-payment icon-money"></span>
@@ -1670,7 +1670,7 @@
                       </div>
                     </div>
                     <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card-payment">
+                      <div class="card card-block nn-card nn-check-payment">
                         <div class="counter counter-lg vertical-align">
                           <div class="vertical-align-middle">
                             <span class="icon fa-file-text-o icon-payment icon-receipt"></span>
@@ -1680,7 +1680,7 @@
                       </div>
                     </div>
                     <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card-payment">
+                      <div class="card card-block nn-card nn-gift-payment">
                         <div class="counter counter-lg vertical-align">
                           <div class="vertical-align-middle">
                             <span class="icon fa-gift icon-payment icon-gift"></span>
@@ -1691,11 +1691,11 @@
                     </div>
                   </div>
                   <p class="mb-20 text-center">Please choose the type of customer’s payment</p>
-                  <button type="button" class="btn nn-btn-modal nn-btn-default d-none">Cancel</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-default">Back</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right d-none">Next</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right">Save</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right mr-20 nn-btn-send">Send</button>
+                  <button type="button" class="btn nn-btn-modal nn-btn-default">Cancel</button>
+                  <button type="button" class="btn nn-btn-modal nn-btn-default d-none">Back</button>
+                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right">Next</button>
+                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right d-none">Save</button>
+                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right mr-20 nn-btn-send d-none">Send</button>
 
                   <div class="clearfix separator"></div>
                 </div>
@@ -1735,6 +1735,154 @@
                     <p class="mb-5 font-size-16 mt-15">Last 4 digits</p>
                     <p class="mb-0 font-size-20 font-weight-bold nn-color-black">6688</p>
                   </div>
+                </div>
+
+                <div class="payment-info-wrapper clearfix mt-20">
+                  <div class="payment-method payment-cash">
+                    <span class="icon fa-money"></span>
+                    <p class="mb-0">Cash</p>
+                  </div>
+                  <div class="payment-amount">
+                    <p class="mb-5 font-size-16 mt-15 pl-20">Amount</p>
+                    <p class="mb-0 font-size-20 font-weight-bold nn-color-black pl-20">$40.00</p>
+                  </div>
+                  <div class="payment-tip">
+                    <p class="mb-5 font-size-16 mt-15">Tip</p>
+                    <p class="mb-0 font-size-20 font-weight-bold nn-color-gray">$0.00</p>
+                  </div>
+                </div>
+
+                <div class="payment-info-wrapper clearfix mt-20">
+                  <div class="payment-method payment-check">
+                    <span class="icon fa-file-text-o"></span>
+                    <p class="mb-0">Check</p>
+                  </div>
+                  <div class="payment-amount">
+                    <p class="mb-5 font-size-16 mt-15 pl-20">Amount</p>
+                    <p class="mb-0 font-size-20 font-weight-bold nn-color-black pl-20">$40.00</p>
+                  </div>
+                  <div class="payment-tip">
+                    <p class="mb-5 font-size-16 mt-15">Tip</p>
+                    <p class="mb-0 font-size-20 font-weight-bold nn-color-gray">$0.00</p>
+                  </div>
+                </div>
+
+                <div class="payment-info-wrapper clearfix mt-20">
+                  <div class="payment-method payment-gift">
+                    <span class="icon fa-gift"></span>
+                    <p class="mb-0">Gift</p>
+                  </div>
+                  <div class="payment-amount">
+                    <p class="mb-5 font-size-16 mt-15 pl-20">Amount</p>
+                    <p class="mb-0 font-size-20 font-weight-bold nn-color-black pl-20">$5.00</p>
+                  </div>
+                  <div class="payment-tip">
+                    <p class="mb-5 font-size-16 mt-15">Tip</p>
+                    <p class="mb-0 font-size-20 font-weight-bold nn-color-gray">$0.00</p>
+                  </div>
+                  <div class="transaction-number">
+                    <p class="mb-5 font-size-16 mt-15">Gift code</p>
+                    <p class="mb-0 font-size-20 font-weight-normal nn-color-black">27580-4104</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="panel payment-information">
+              <div class="panel-body pt-15 pb-20">
+                <div class="form-group row mb-15">
+                  <label class="col-md-3 col-form-label nn-color-black font-size-18 font-weight-500">Coupon</label>
+                  <div class="col-md-9">
+                    <div class="input-search coupon-input">
+                      <input type="text" id="scan-input" class="form-control" value="" placeholder="Please enter or scan your coupon here">
+                      <i class="input-search-icon input-search-icon-right wb-arrow-right" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="table table-striped m-0 coupon-table">
+                    <thead>
+                      <tr>
+                        <td>Coupon Code</td>
+                        <td>Coupon Name</td>
+                        <td>Amount (USD)</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="font-weight-500">948-107-1036</td>
+                        <td class="font-weight-500">Combo Services</td>
+                        <td>$5.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel mb-15">
+              <div class="panel-heading">
+                <span class="panel-title font-weight-500 nn-color-black">Tip Adjustment</span>
+                <div class="panel-actions">
+                  <span class="span-add-payment">Save changes</span>
+                  <button type="button" id="btn-add-service" class="btn btn-icon nn-btn-primary btn-outline" >
+                    <i class="icon fa-save" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="panel-body pb-20 pt-0">
+                <div class="table-responsive">
+                  <table class="table table-striped m-0 tip-table">
+                    <thead>
+                      <tr>
+                        <td>Services</td>
+                        <td>Nail Tech</td>
+                        <td>Tip (USD)</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="font-weight-500 nn-color-black">"Soul Refresher" Spa Pedicure</td>
+                        <td>Grace Marshall</td>
+                        <td class="pr-20 middle">
+                          <div class="form-group row m-0">
+                            <div class="col-6 pl-0 pr-5">
+                              <select class="form-control nn-select" >
+                                <option value="credit-card">Credit Card</option>
+                                <option value="cash">Cash</option>
+                                <option value="gift">Gift</option>
+                                <option value="check">Check</option>
+                              </select>
+                            </div>
+                            <div class="col-6 pl-5 pr-0">
+                              <input type="text" class="form-control nn-color-black font-size-16 font-weight-normal" value="$5.00" >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="font-weight-500 nn-color-black">"Love Me Tender" Spa Pedicure</td>
+                        <td>Sammy Lawson</td>
+                        <td class="pr-20 middle">
+                          <div class="form-group row m-0">
+                            <div class="col-6 pl-0 pr-5">
+                              <select class="form-control nn-select">
+                                <option value="credit-card">Credit Card</option>
+                                <option value="cash">Cash</option>
+                                <option value="gift">Gift</option>
+                                <option value="check">Check</option>
+                              </select>
+                            </div>
+                            <div class="col-6 pl-5 pr-0">
+                              <input type="text" class="form-control nn-color-black font-size-16 font-weight-normal" value="$5.00" >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

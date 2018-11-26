@@ -1,6 +1,9 @@
 .nn-color-grey {
   color: #76838f;
 }
+.nn-color-gray {
+  color: #ccd5db;
+}
 .nn-color-black {
   color: #263238;
 }
@@ -72,7 +75,7 @@
 .nn-process-bar {
   background-color: #02bcd4;
 }
-.nn-card-payment {
+.nn-card {
   border-radius: 4px;
   border: 1px solid #d6dde8;
   padding-top: 15px;
@@ -191,6 +194,15 @@
 }
 .payment-credit-card {
   background-color: #3e8ef7;
+}
+.payment-cash {
+  background-color: #17b3a3;
+}
+.payment-check {
+  background-color: #ff9802;
+}
+.payment-gift {
+  background-color: #f44337;
 }
 .payment-method > .icon {
   font-size: 32px;
@@ -351,4 +363,27 @@
   margin-right: -30px;
   background: #d6dde8;
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.card.nn-card:hover {
+  cursor: pointer;
+}
+.card.nn-card:hover .vertical-align-middle > span,
+.card.nn-card.active .vertical-align-middle > span {
+  color: #fff;
+}
+.card.nn-card:hover .vertical-align-middle > p,
+.card.nn-card.active .vertical-align-middle > p {
+  color: #fff;
+}
+.card.nn-card-payment:hover, .card.nn-card-payment.active {
+  background-color: #3e8ef7;
+}
+.card.nn-cash-payment:hover, .card.nn-cash-payment.active {
+  background-color: #17b3a3;
+}
+.card.nn-check-payment:hover, .card.nn-check-payment.active {
+  background-color: #ff9802;
+}
+.card.nn-gift-payment:hover, .card.nn-gift-payment.active  {
+  background-color: #f44337;
 }
