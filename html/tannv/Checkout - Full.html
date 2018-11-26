@@ -1638,64 +1638,199 @@
               <div class="panel-heading">
                 <span class="panel-title font-weight-500 nn-color-black">Payment Information</span>
               </div>
-              <div class="panel-body pt-20 pb-20">
-                <div class="add-payment-div">
+              <div class="panel-body pb-20">
+                <div id="add-payment-div" class="mt-20">
                   <div class="clearfix mb-5">
                     <span class="nn-color-black font-size-16">Payment Type</span>
-                    <div class="progress progress-xs w-120 w-lg-120 nn-progress mt-10">
-                      <div class="progress-bar nn-process-bar" style="width: 50%;">
-                        <span class="sr-only">50% Complete</span>
+                    <div class="progress progress-xs w-120 w-lg-120 nn-progress mt-10" data-goal="0"
+                      data-plugin="progress">
+                      <div class="progress-bar nn-process-bar" aria-valuemin="-100" aria-valuemax="0" style="width: 50%"
+                        aria-valuenow="-50" role="progressbar">
                       </div>
                     </div>
                   </div>
-                  <div class="row mx-7-s mb-15">
-                    <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card nn-card-payment">
-                        <div class="counter counter-lg vertical-align">
-                          <div class="vertical-align-middle">
-                            <span class="icon fa-credit-card icon-credit-card icon-payment"></span>
-                            <p class="nn-color-black font-size-16 mb-0">Credit Card</p>
+                  <div id="payment-div">
+                    <div class="row mx-7-s mb-15">
+                      <div class="col-lg-3 col-6 px-7">
+                        <div class="card card-block nn-card nn-card-payment" type="credit">
+                          <div class="counter counter-lg vertical-align">
+                            <div class="vertical-align-middle">
+                              <span class="icon fa-credit-card icon-credit-card icon-payment"></span>
+                              <p class="nn-color-black font-size-16 mb-0">Credit Card</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-6 px-7">
+                        <div class="card card-block nn-card nn-cash-payment" type="cash">
+                          <div class="counter counter-lg vertical-align">
+                            <div class="vertical-align-middle">
+                              <span class="icon fa-money icon-payment icon-money"></span>
+                              <p class="nn-color-black font-size-16 mb-0">Cash</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-6 px-7">
+                        <div class="card card-block nn-card nn-check-payment" type="check">
+                          <div class="counter counter-lg vertical-align">
+                            <div class="vertical-align-middle">
+                              <span class="icon fa-file-text-o icon-payment icon-receipt"></span>
+                              <p class="nn-color-black font-size-16 mb-0">Check</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-6 px-7">
+                        <div class="card card-block nn-card nn-gift-payment" type="gift">
+                          <div class="counter counter-lg vertical-align">
+                            <div class="vertical-align-middle">
+                              <span class="icon fa-gift icon-payment icon-gift"></span>
+                              <p class="nn-color-black font-size-16 mb-0">Gift</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card nn-cash-payment">
-                        <div class="counter counter-lg vertical-align">
-                          <div class="vertical-align-middle">
-                            <span class="icon fa-money icon-payment icon-money"></span>
-                            <p class="nn-color-black font-size-16 mb-0">Cash</p>
+                    <p class="mb-20 text-center">Please choose the type of customer’s payment</p>
+                  </div>
+
+                  <!-- Credit Card -->
+                  <div class="row mx-0 mb-20 credit-card-wrapper" id="credit-div">
+                    <div class="col-3 credit-card-left">
+                      <div class="credit-card-box">
+                        <span class="icon fa-credit-card icon-credit-card icon-payment"></span>
+                        <p class="mb-0 font-size-16 nn-color-black">Credit Card</p>
+                      </div>
+                    </div>
+                    <div class="col-9 credit-card-right">
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="payInput">Pay</label>
+                          <input type="text" class="form-control nn-checkout-input" value="$80.00" id="payInput" name="payInput" autocomplete="off">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="tipInput">Tip</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control nn-checkout-input mr-1" value="$10.00" id="tipInput" name="tipInput" autocomplete="off">
+                            <button type="button" id="btn-quick-tip" class="btn btn-icon nn-btn-quicktip btn-outline" >
+                              <i class="icon fa-bolt" aria-hidden="true"></i>
+                            </button>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card nn-check-payment">
-                        <div class="counter counter-lg vertical-align">
-                          <div class="vertical-align-middle">
-                            <span class="icon fa-file-text-o icon-payment icon-receipt"></span>
-                            <p class="nn-color-black font-size-16 mb-0">Check</p>
-                          </div>
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <label class="form-control-label font-size-16" for="transactionInput">Transaction Number</label>
+                          <input type="text" class="form-control nn-checkout-input" value="235A9804AC82" id="transactionInput" name="transactionInput" autocomplete="off">
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-6 px-7">
-                      <div class="card card-block nn-card nn-gift-payment">
-                        <div class="counter counter-lg vertical-align">
-                          <div class="vertical-align-middle">
-                            <span class="icon fa-gift icon-payment icon-gift"></span>
-                            <p class="nn-color-black font-size-16 mb-0">Gift</p>
+                  </div>
+                  <!-- End Credit Card -->
+                  <!--- Check --->
+                  <div class="row mx-0 mb-20 credit-card-wrapper" id="check-div">
+                    <div class="col-3 credit-card-left">
+                      <div class="credit-card-box">
+                        <span class="icon fa-file-text-o icon-payment icon-receipt"></span>
+                        <p class="mb-0 font-size-16 nn-color-black">Check</p>
+                      </div>
+                    </div>
+                    <div class="col-9 credit-card-right">
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="payInput">Pay</label>
+                          <input type="text" class="form-control nn-checkout-input" value="$80.00" id="payInput" name="payInput" autocomplete="off">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="tipInput">Tip</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control nn-checkout-input mr-1" value="$10.00" id="tipInput" name="tipInput" autocomplete="off">
+                            <button type="button" id="btn-quick-tip2" class="btn btn-icon nn-btn-quicktip btn-outline" >
+                              <i class="icon fa-bolt" aria-hidden="true"></i>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <p class="mb-20 text-center">Please choose the type of customer’s payment</p>
-                  <button type="button" class="btn nn-btn-modal nn-btn-default">Cancel</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-default d-none">Back</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right">Next</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right d-none">Save</button>
-                  <button type="button" class="btn nn-btn-modal nn-btn-primary float-right mr-20 nn-btn-send d-none">Send</button>
+                  <!-- End Check -->
+                  <!--- Cash --->
+                  <div class="row mx-0 mb-20 credit-card-wrapper" id="cash-div">
+                    <div class="col-3 credit-card-left">
+                      <div class="credit-card-box">
+                        <span class="icon fa-money icon-payment icon-money"></span>
+                        <p class="mb-0 font-size-16 nn-color-black">Cash</p>
+                      </div>
+                    </div>
+                    <div class="col-9 credit-card-right">
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="payInput">Pay</label>
+                          <input type="text" class="form-control nn-checkout-input" value="$80.00" id="payInput" name="payInput" autocomplete="off">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="tipInput">Tip</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control nn-checkout-input mr-1" value="$10.00" id="tipInput" name="tipInput" autocomplete="off">
+                            <button type="button" id="btn-quick-tip2" class="btn btn-icon nn-btn-quicktip btn-outline" >
+                              <i class="icon fa-bolt" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Cash -->
+
+                  <!--- Gift --->
+                  <div class="row mx-0 mb-20 credit-card-wrapper" id="gift-div">
+                    <div class="col-3 credit-card-left">
+                      <div class="credit-card-box">
+                        <span class="icon fa-gift icon-payment icon-gift"></span>
+                        <p class="mb-0 font-size-16 nn-color-black">Gift Card</p>
+                      </div>
+                    </div>
+                    <div class="col-9 credit-card-right">
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <label class="form-control-label font-size-16" for="giftcardInput">Please enter or scan your Gift Card code here:</label>
+                          <div class="input-search gift-card-input">
+                            <input type="text" class="form-control" id="giftcardInput" name="giftcardInput" value="481-175-9553">
+                            <i class="input-search-icon input-search-icon-right wb-arrow-right" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <label class="form-control-label font-size-16" for="afterscanInput">After scan</label>
+                          <div class="input-search gift-card-input after-scan">
+                            <input type="text" class="form-control" value="481-175-9553" id="afterscanInput" name="afterscanInput">
+                            <span class="gift-card-balance" >Balance: $15.00</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="amountInput">Amount</label>
+                          <input type="text" class="form-control nn-checkout-input" value="$5.00" id="amountInput" name="amountInput" autocomplete="off">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="form-control-label font-size-16" for="tipInput">Tip</label>
+                          <input type="text" class="form-control nn-checkout-input" value="" placeholder="$0.00" id="tipInput" name="tipInput" autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Gift -->
+                  <div class="btn-groups">
+                    <button id="btn-cancel" type="button" class="btn nn-btn-modal nn-btn-default">Cancel</button>
+                    <button id="btn-back" type="button" class="btn nn-btn-modal nn-btn-default">Back</button>
+                    <button id="btn-next" type="button" class="btn nn-btn-modal nn-btn-primary float-right">Next</button>
+                    <button id="btn-save" type="button" class="btn nn-btn-modal nn-btn-primary float-right">Save</button>
+                    <button id="btn-send" type="button" class="btn nn-btn-modal nn-btn-primary float-right mr-20 nn-btn-send">Send</button>
+                  </div>
+
 
                   <div class="clearfix separator"></div>
                 </div>
@@ -1789,6 +1924,7 @@
             </div>
 
 
+            <!-- Coupon -->
             <div class="panel payment-information">
               <div class="panel-body pt-15 pb-20">
                 <div class="form-group row mb-15">
@@ -1821,7 +1957,9 @@
                 </div>
               </div>
             </div>
+            <!-- End Coupon -->
 
+            <!-- Tip Adjustment -->
             <div class="panel mb-15">
               <div class="panel-heading">
                 <span class="panel-title font-weight-500 nn-color-black">Tip Adjustment</span>
@@ -1886,6 +2024,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- End Tip Adjustment -->
           </div>
           <div class="col-lg-4 col-12">
             <div class="panel mb-15">
@@ -1963,6 +2103,32 @@
     </div>
     <!-- End Page -->
 
+    <!-- Popup select tip -->
+    <div id="quicktip-popover" hidden>
+      <div class="row mx-5-s mb-15">
+        <div class="col-3 px-5">
+          <button type="button" class="btn nn-btn-tip nn-btn-tip-success">$5</button>
+        </div>
+        <div class="col-3 px-5">
+          <button type="button" class="btn nn-btn-tip nn-btn-tip-success">$10</button>
+        </div>
+        <div class="col-3 px-5">
+          <button type="button" class="btn nn-btn-tip nn-btn-tip-success">$15</button>
+        </div>
+        <div class="col-3 px-5">
+          <button type="button" class="btn nn-btn-tip nn-btn-tip-success">$20</button>
+        </div>
+      </div>
+      <div class="row mx-5-s">
+        <div class="col-3 px-5">
+          <button type="button" class="btn nn-btn-tip nn-btn-tip-primary">10%</button>
+        </div>
+        <div class="col-3 px-5">
+          <button type="button" class="btn nn-btn-tip nn-btn-tip-primary">20%</button>
+        </div>
+      </div>
+    </div>
+    <!-- #End Popup select tip -->
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -1990,6 +2156,7 @@
     <script src="../../assets/vendor/bootstrap-select/bootstrap-select.js"></script>
     <script src="../../assets/vendor/webui-popover/jquery.webui-popover.min.js"></script>
     <script src="../../assets/vendor/toolbar/jquery.toolbar.js"></script>
+    <script src="../../assets/vendor/asprogress/jquery-asProgress.js"></script>
 
     <!-- Scripts -->
     <script src="../../assets/js/Component.js"></script>
@@ -2015,6 +2182,7 @@
     <script src="../../assets/js/Plugin/bootstrap-select.js"></script>
     <script src="../../assets/js/Plugin/webui-popover.js"></script>
     <script src="../../assets/js/Plugin/toolbar.js"></script>
+    <script src="../../assets/js/Plugin/asprogress.js"></script>
 
     <script src="../../assets/tannv/js/checkout.js"></script>
   </body>
