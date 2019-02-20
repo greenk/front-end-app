@@ -33,6 +33,14 @@
     width: 54px;
     height: 54px;
 }
+.avatar-37 {
+    width: 37px;
+    height: 37px;
+}
+.avatar-24 {
+    width: 24px;
+    height: 24px;
+}
 .page-content {
     padding: 0 20px 20px 20px !important;
 }
@@ -98,4 +106,87 @@
 }
 .appointment-in-month {
     padding-top: 33px;
+}
+.modal-title > .page-title{
+    font-size: 18px;
+}
+
+.nn-modal-mobile > .modal-dialog {
+    height: 100%;
+    padding: 56px 0px 0px 0px;
+    margin: 0;
+}
+.close {
+    float: right;
+    font-size: 30px;
+     font-weight: 500;
+     line-height: 1;
+    color: #000;
+    text-shadow: none;
+    opacity: .5;
+}
+.nn-modal-mobile > .modal-dialog > .modal-content > .modal-body {
+    background-color: #f1f4f5;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #76838f;
+}
+.slider {
+    margin: 0 20px 20px !important;
+    text-align: center;
+}
+.nn-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    margin: 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+.nn-item:hover {
+    cursor: pointer;
+}
+.nn-item.current {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    background-color: #44d6c8;
+}
+.nn-item.current > p {
+    color: #fff;
+}
+.nn-color-black {
+    color: #263238;
+}
+.modal-simple .modal-header+.modal-body {
+    padding-top: 12px;
+}
+.pull-right {
+    text-align: right;
+}
+.color-gray {
+    color: #89939b;
+}
+.color-gray-1 {
+    color: #838f9a;
+}
+.fa-rotate-270 {
+    transform: rotate(270deg) !important;
+}
+hr {
+    margin: 0;
+}
+.service {
+    border-radius: 4px;
+    margin: 8px 2px;
+    padding: 1px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d6dde8;
+    color: #263238;
+    font-size: 12px;
+}
+.nail-tech-info {
+    padding-top: 11px;
 }
