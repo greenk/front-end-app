@@ -114,7 +114,7 @@
 .nn-modal-mobile > .modal-dialog {
     height: 100%;
     padding: 56px 0px 0px 0px;
-    margin: 0;
+    /*margin: 0;*/
 }
 .close {
     float: right;
