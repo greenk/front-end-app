@@ -82,3 +82,79 @@ a {
 .line-height-0 {
     line-height: normal;
 }
+.open-appointment {
+    border-radius: 4px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12);
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+
+.modal-simple .modal-header+.modal-body {
+    padding-top: 12px;
+}
+.pull-right {
+    text-align: right;
+}
+.color-gray {
+    color: #89939b;
+}
+.color-gray-1 {
+    color: #838f9a;
+}
+.color-white {
+    color: #fff !important;
+}
+.fa-rotate-270 {
+    transform: rotate(270deg) !important;
+}
+hr {
+    margin: 0 20px;
+}
+.service {
+    border-radius: 4px;
+    margin: 8px 2px;
+    padding: 1px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d6dde8;
+    color: #263238;
+    font-size: 12px;
+    background-color: #f3f7f9;
+}
+.nail-tech-info {
+    padding-top: 11px;
+}
+.nn-panel-success{
+    text-align: left;
+}
+
+.avatar-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.header-appointment {
+    background-color: #44d6c8;
+    border-radius: 4px 4px 0 0;
+    border: solid 1px #44d6c8;
+    text-align: center;
+    cursor: pointer;
+}
+.pt-0 {
+    padding-top: 0 !important;
+}
+.pr-8 {
+    padding-right: 8px;
+}
+.action-appointment {
+    width: 100%;
+}
+.action-appointment > button {
+    width: 50%;
+    color: #2c3a4a !important;
+}
+.fa-trash-alt, .fa-pencil-alt {
+    color: #ccd5db;
+    font-size: 18px;
+}
