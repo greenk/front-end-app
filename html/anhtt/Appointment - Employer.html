@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="../../assets/vendor/formvalidation/formValidation.css">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
     <link rel="stylesheet" href="../../assets/custom-vendor/font-awesome-5/css/all.css">
+    <link rel="stylesheet" href="../../assets/custom-vendor/tui-calendar/tui-calendar.css">
 
     <link rel="stylesheet" href="../../assets/vendor/select2/select2.css">
     <link rel="stylesheet" href="../../assets/tannv/css/book-an-appointment.css">
@@ -1608,9 +1609,9 @@
                             <div class="col-12 float-left">
                                 <div class="nav-tabs-horizontal" data-plugin="tabs">
                                     <ul class="nav nav-tabs calendar-nav-tab float-left" role="tablist">
-                                        <li class="nav-item calendar-tab" role="presentation"><a class="nav-link border-radius-left active" data-toggle="tab" href="#tabDate"
+                                        <li class="nav-item calendar-tab" role="presentation"><a class="nav-link border-radius-left" data-toggle="tab" href="#tabDate"
                                                                                     aria-controls="exampleTabsOne" role="tab">Date</a></li>
-                                        <li class="nav-item calendar-tab" role="presentation"><a class="nav-link border-radius-0" data-toggle="tab" href="#tabWeek"
+                                        <li class="nav-item calendar-tab" role="presentation"><a class="nav-link border-radius-0 active" data-toggle="tab" href="#tabWeek"
                                                                                     aria-controls="exampleTabsTwo" role="tab">Week</a></li>
                                         <li class="nav-item calendar-tab" role="presentation"><a class="nav-link  border-radius-right" data-toggle="tab" href="#tabMonth"
                                                                                     aria-controls="exampleTabsThree" role="tab">Month</a></li>
@@ -1629,7 +1630,7 @@
                         <div class="row appointment-detail-day">
                             <div class="col-12">
                                 <div class="tab-content">
-                                    <div class="tab-pane active" id="tabDate" role="tabpanel">
+                                    <div class="tab-pane" id="tabDate" role="tabpanel">
                                         <div class="row ">
                                             <div class="col-4">
                                                 <div class="heading-note">
@@ -1711,11 +1712,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="tabWeek" role="tabpanel">
-                                        Negant parvos fructu nostram mutans supplicii ac dissentias, maius tibi licebit
-                                        ruinae philosophia. Salutatus repellere titillaret expetendum
-                                        ipsi. Cupiditates intellegam exercitumque privatio concederetur,
-                                        sempiternum, verbis malint dissensio nullas noctesque earumque.
+                                    <div class="tab-pane active" id="tabWeek" role="tabpanel">
+                                        <div id="calendar" style="height: 600px;">
+
+                                        </div>
                                     </div>
                                     <div class="tab-pane" id="tabMonth" role="tabpanel">
                                         Benivole horrent tantalo fuisset adamare fugiendam tractatos indicaverunt animis
@@ -1726,109 +1726,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="col-12 float-left">-->
-                                <!--<ul class="nav nav-tabs" role="tablist">-->
-                                    <!--<li class="nav-item" role="presentation"><a class="nav-link active" data-toggle="tab" href="#exampleTabsOne"-->
-                                                                                <!--aria-controls="exampleTabsOne" role="tab">Home</a></li>-->
-                                    <!--<li class="nav-item" role="presentation"><a class="nav-link" data-toggle="tab" href="#exampleTabsTwo"-->
-                                                                                <!--aria-controls="exampleTabsTwo" role="tab">Components</a></li>-->
-                                    <!--<li class="nav-item" role="presentation"><a class="nav-link" data-toggle="tab" href="#exampleTabsThree"-->
-                                                                                <!--aria-controls="exampleTabsThree" role="tab">Css</a></li>-->
-                                <!--</ul>-->
-                                <!--&lt;!&ndash;<div class="btn-group" aria-label="Basic example" role="group">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<button type="button" class="btn btn-outline btn-default btn-active">Date</button>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<button type="button" class="btn btn-outline btn-default">Week</button>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<button type="button" class="btn btn-outline btn-default">Month</button>&ndash;&gt;-->
-                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                                <!--<div class="btn-group single-group" aria-label="Basic example" role="group">-->
-                                    <!--<button type="button" class="btn btn-outline btn-default nn-color-black">Today</button>-->
-                                <!--</div>-->
-                                <!--<div class="btn-group single-group icon-btn" aria-label="Basic example" role="group">-->
-                                    <!--<button type="button" class="btn btn-outline btn-default icon-btn"><i class="icon wb-chevron-left" aria-hidden="true"></i></button>-->
-                                    <!--<button type="button" class="btn btn-outline ml-8 btn-default icon-btn"><i class="icon wb-chevron-right" aria-hidden="true"></i></button>-->
-                                    <!--<p class="nn-color-black font-weight-500 font-size-18 mb-0 ml-25">Wednesday, Nov 28 2018</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--<div class="row appointment-detail-day">-->
-                            <!--<div class="col-4">-->
-                                <!--<div class="heading-note">-->
-                                    <!--<div class="text-center">-->
-                                        <!--<p class="nn-color-black font-size-16 font-weight-500  mb-8">Morning</p>-->
-                                    <!--</div>-->
-                                    <!--<div class="text-center">-->
-                                        <!--<p class="nn-color-gray font-size-14 mb-20">2 appointments</p>-->
-                                    <!--</div>-->
-                                    <!--<div class="card card-shadow card-appointment text-center border-expired">-->
-                                        <!--<div class="vertical-align px-0">-->
-                                            <!--<div class="vertical-align-bottom w-full">-->
-                                                <!--<p class="time-expired font-size-16 font-weight-500 mt-8 mb-4">11:00 am</p>-->
-                                                <!--<p class="nn-color-gray line-height-0 font-size-13 mb-8">Veerle</p>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="col-4">-->
-                                <!--<div class="heading-note">-->
-                                    <!--<div class="text-center">-->
-                                        <!--<p class="nn-color-black font-size-16 font-weight-500  mb-8">Afternoon</p>-->
-                                    <!--</div>-->
-                                    <!--<div class="text-center">-->
-                                        <!--<p class="nn-color-gray font-size-14 mb-20">4 appointments</p>-->
-                                    <!--</div>-->
-                                    <!--<div class="card card-shadow card-appointment text-center border-doing">-->
-                                        <!--<div class="vertical-align px-0">-->
-                                            <!--<div class="vertical-align-bottom w-full">-->
-                                                <!--<p class="time-doing font-size-16 font-weight-500 mt-8 mb-4">13:00 pm</p>-->
-                                                <!--<p class="nn-color-gray line-height-0 font-size-13 mb-8">Ogasawara</p>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="card card-shadow card-appointment text-center border-doing">-->
-                                        <!--<div class="vertical-align px-0">-->
-                                            <!--<div class="vertical-align-bottom w-full">-->
-                                                <!--<p class="time-doing font-size-16 font-weight-500 mt-8 mb-4">14:30 pm</p>-->
-                                                <!--<p class="nn-color-gray line-height-0 font-size-13 mb-8">Henry</p>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="card card-shadow card-appointment text-center border-doing">-->
-                                        <!--<div class="vertical-align px-0">-->
-                                            <!--<div class="vertical-align-bottom w-full">-->
-                                                <!--<p class="time-doing font-size-16 font-weight-500 mt-8 mb-4">15:00 pm</p>-->
-                                                <!--<p class="nn-color-gray line-height-0 font-size-13 mb-8">Nonkosi</p>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="card card-shadow card-appointment text-center border-doing">-->
-                                        <!--<div class="vertical-align px-0">-->
-                                            <!--<div class="vertical-align-bottom w-full">-->
-                                                <!--<p class="time-doing font-size-16 font-weight-500 mt-8 mb-4">15:30 pm</p>-->
-                                                <!--<p class="nn-color-gray line-height-0 font-size-13 mb-8">Richardo</p>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="col-4">-->
-                                <!--<div class="heading-note">-->
-                                    <!--<div class="text-center">-->
-                                        <!--<p class="nn-color-black font-size-16 font-weight-500  mb-8">Evening</p>-->
-                                    <!--</div>-->
-                                    <!--<div class="text-center">-->
-                                        <!--<p class="nn-color-gray font-size-14 mb-20">1 appointments</p>-->
-                                    <!--</div>-->
-                                    <!--<div class="card card-shadow card-appointment text-center border-doing">-->
-                                        <!--<div class="vertical-align px-0">-->
-                                            <!--<div class="vertical-align-bottom w-full">-->
-                                                <!--<p class="time-doing font-size-16 font-weight-500 mt-8 mb-4">20:00 pm</p>-->
-                                                <!--<p class="nn-color-gray line-height-0 font-size-13 mb-8">Carolien</p>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
                     </div>
                 </div>
 
@@ -1898,7 +1795,8 @@
 <script src="../../assets/js/Plugin/matchheight.js"></script>
 <script src="../../assets/js/Plugin/select2.js"></script>
 <script src="../../assets/js/Plugin/bootstrap-datepicker.js"></script>
-
+<script src="../../assets/custom-vendor/tui-calendar/tui-code-snippet.js"></script>
+<script src="../../assets/custom-vendor/tui-calendar/tui-calendar.js"></script>
 <script src="../../assets/anhtt/js/appointment_employer.js"></script>
 </body>
 </html>
