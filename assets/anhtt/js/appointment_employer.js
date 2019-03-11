@@ -132,7 +132,7 @@ function rendCalendar() {
         'common.creationGuide.border': '1px solid #515ce6',
 
         // month header 'dayname'
-        'month.dayname.height': '31px',
+        'month.dayname.height': '50px',
         'month.dayname.borderLeft': '1px solid #e5e5e5',
         'month.dayname.paddingLeft': '10px',
         'month.dayname.paddingRight': '10px',
@@ -187,22 +187,23 @@ function rendCalendar() {
         'week.daygrid.backgroundColor': 'inherit',
 
         'week.daygridLeft.width': '72px',
-        'week.daygridLeft.backgroundColor': 'inherit',
+        'week.daygridLeft.backgroundColor': 'red',
         'week.daygridLeft.paddingRight': '8px',
         'week.daygridLeft.borderRight': '1px solid #e5e5e5',
 
-        'week.today.backgroundColor': 'rgba(81, 92, 230, 0.05)',
+        'week.today.backgroundColor': 'inherit',
         'week.weekend.backgroundColor': 'inherit',
 
         // week timegrid 'timegrid'
         'week.timegridLeft.width': '72px',
         'week.timegridLeft.backgroundColor': 'inherit',
         'week.timegridLeft.borderRight': '1px solid #e5e5e5',
-        'week.timegridLeft.fontSize': '11px',
+        'week.timegridLeft.fontSize': '14px',
+        'week.timegridLeft.textAlign': 'center',
         'week.timegridLeftTimezoneLabel.height': '20px',
 
-        'week.timegridOneHour.height': '52px',
-        'week.timegridHalfHour.height': '26px',
+        'week.timegridOneHour.height': '100px',
+        'week.timegridHalfHour.height': '50px',
         'week.timegridHalfHour.borderBottom': 'none',
         'week.timegridHorizontalLine.borderBottom': '1px solid #e5e5e5',
 
@@ -245,6 +246,7 @@ function rendCalendar() {
         taskView: false,
         scheduleView: ['time'],
         isAllDay: false,
+        useDetailPopup: true,
         week: {
             startDayOfWeek: 1,
             hourStart: 7
@@ -254,50 +256,113 @@ function rendCalendar() {
             weekDayname: function(model) {
                 var splitDatetime = model.renderDate.split("-");
                 var getMonthName = convertMonthNumberToMonthName(splitDatetime[1]);
-                return '<span style="    font-size: 16px !important;\n' +
-                    '    font-weight: 500;\n' +
-                    '    line-height: 1.25;\n' +
-                    '    letter-spacing: normal;\n' +
-                    '    text-align: left;\n' +
-                    '    padding-left: 8px; \n' +
-                    '    color: #263238;' +
-                    '    display: block">' +
+                return '<span class="tui-full-calendar-dayname-date-custom">' +
                     '' +  model.dayName +
-                    '</span><span style="    font-size: 13px;\n' +
-                    '    font-weight: normal;\n' +
-                    '    font-style: normal;\n' +
-                    '    display: block;\n' +
-                    '    text-align: left; \n' +
-                    '    padding-left: 8px; \n' +
-                    '    font-stretch: normal;\n' +
-                    '    line-height: 1.54;\n' +
-                    '    letter-spacing: normal;\n' +
-                    '    color: #76838f;" >' + splitDatetime[2] + ' ' + getMonthName + '</span>';
+                    '</span><span class="tui-full-calendar-dayname-name-custom">' + splitDatetime[2] + ' ' + getMonthName + '</span>';
+            },
+            time: function(schedule) {
+                $stringAppointment = schedule.title === '1' ? 'appointment' : 'appointments';
+                return '<span style="font-size: 16px; display: block">' + schedule.title +'</span>'  +
+                    '<span style="font-size: 12px; color:#76838f; display: block; opacity: 0.7; font-weight: normal">' +
+                    $stringAppointment + '</span>';
+            },
+            'timegridDisplayPrimayTime' : function(time) {
+
+                return '<span style="    text-align: center;\n' +
+                    '    font-size: 14px;\n' +
+                    '    color: #263238; ">' +  time.hour + ':00' + ' </span>';
+            },
+            'timegridDisplayTime' : function(time) {
+                var meridiem = time.hour < 12 ? 'am' : 'pm';
+
+                return time.hour + ' ' + meridiem;
+            },
+            popupDetailDate: function(isAllDay, start, end) {
+                var isSameDate = moment(start).isSame(end);
+                var endFormat = (isSameDate ? '' : 'YYYY.MM.DD ') + 'hh:mm a';
+                $('#mdl-appointment-detail').modal('show');
+                if (isAllDay) {
+                    return moment(start).format('YYYY.MM.DD') + (isSameDate ? '' : ' - ' + moment(end).format('YYYY.MM.DD'));
+                }
+
+                return (moment(start).format('YYYY.MM.DD hh:mm a') + ' - ' + moment(end).format(endFormat));
             },
         }
     });
-
-    calendar.createSchedules([
+    var schedule = [
         {
             id: '1',
             calendarId: '1',
-            title: 'my schedule',
+            title: '1',
             category: 'time',
             dueDateClass: '',
-            start: '2019-03-06T22:30:00+09:00',
-            end: '2019-03-06T02:30:00+09:00'
+            start: '2019-03-11T09:30:00+09:00',
+            end: '2019-03-11T10:00:00+09:00',
+            bgColor: returnBorderColorAndBgColorForSchedule(1, 2),
+            borderColor: returnBorderColorAndBgColorForSchedule(1, 1)
         },
         {
             id: '2',
             calendarId: '1',
-            title: 'second schedule',
+            title: '2',
             category: 'time',
             dueDateClass: '',
-            start: '2019-03-05T17:30:00+09:00',
-            end: '2019-03-05T17:31:00+09:00',
-            isReadOnly: true    // schedule is read-only
+            start: '2019-03-12T09:00:00+09:00',
+            end: '2019-03-12T09:30:00+09:00',
+            isReadOnly: true,    // schedule is read-only
+            bgColor: returnBorderColorAndBgColorForSchedule(2, 2),
+            borderColor: returnBorderColorAndBgColorForSchedule(2, 1)
+        },
+        {
+            id: '3',
+            calendarId: '1',
+            title: '2',
+            category: 'time',
+            dueDateClass: '',
+            start: '2019-03-11T15:30:00+09:00',
+            end: '2019-03-11T16:00:00+09:00',
+            isReadOnly: true,    // schedule is read-only
+            bgColor: returnBorderColorAndBgColorForSchedule(3, 2),
+            borderColor: returnBorderColorAndBgColorForSchedule(3, 1)
+        },
+        {
+            id: '4',
+            calendarId: '1',
+            title: '5',
+            category: 'time',
+            dueDateClass: '',
+            start: '2019-03-13T15:00:00+09:00',
+            end: '2019-03-13T15:30:00+09:00',
+            isReadOnly: true,    // schedule is read-only
+            bgColor: returnBorderColorAndBgColorForSchedule(4, 2),
+            borderColor: returnBorderColorAndBgColorForSchedule(4, 1)
+        },
+        {
+            id: '5',
+            calendarId: '1',
+            title: '4',
+            category: 'time',
+            dueDateClass: '',
+            start: '2019-03-14T14:00:00+09:00',
+            end: '2019-03-14T14:30:00+09:00',
+            isReadOnly: true,    // schedule is read-only
+            bgColor: returnBorderColorAndBgColorForSchedule(5, 2),
+            borderColor: returnBorderColorAndBgColorForSchedule(5, 1)
+        },
+        {
+            id: '6',
+            calendarId: '1',
+            title: '8',
+            category: 'time',
+            dueDateClass: '',
+            start: '2019-03-15T10:00:00+09:00',
+            end: '2019-03-15T10:30:00+09:00',
+            isReadOnly: true,    // schedule is read-only
+            bgColor: returnBorderColorAndBgColorForSchedule(6, 2),
+            borderColor: returnBorderColorAndBgColorForSchedule(6, 1)
         }
-    ]);
+    ];
+    calendar.createSchedules(schedule);
 
     // default keys and styles
 }
@@ -316,4 +381,13 @@ function convertMonthNumberToMonthName(monthNumber) {
         "11" : "Nov",
         "12" : "Dec"};
     return months[monthNumber];
+}
+
+function returnBorderColorAndBgColorForSchedule(scheduleId, borderOrBg) {
+    const IS_BORDER = 1;
+    const IS_BACKGROUND = 2;
+    var borderColor = ['#06bc9e', '#ff5583', '#3f51b5', '#bbdc02'];
+    var bgColor = ['#E8F8F5', '#FEEEF2', '#EBEDF7', '#F8FBE4'];
+    return borderOrBg === IS_BORDER ? borderColor[scheduleId % borderColor.length] : bgColor[scheduleId % bgColor.length];
+
 }
