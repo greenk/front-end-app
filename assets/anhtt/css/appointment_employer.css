@@ -56,7 +56,7 @@ a {
     color: #263238 !important;
 }
 .nn-color-gray {
-    color: #76838f;
+    color: #76838f !important;
 }
 .appointment-detail-day {
     padding-top: 30px;
@@ -124,6 +124,9 @@ a {
 .pull-right {
     text-align: right;
 }
+.color-blue {
+    color: #17b3a3 !important;
+}
 .color-gray {
     color: #89939b;
 }
@@ -148,13 +151,17 @@ hr {
     border-color: #d6dde8;
     color: #263238;
     font-size: 12px;
-    background-color: #f3f7f9;
+    background-color: #ffffff;
 }
 .nail-tech-info {
     padding-top: 11px;
 }
 .nn-panel-success{
     text-align: left;
+    border-radius: 4px;
+    box-shadow: inset 0 -1px 0 0 #d6dde8;
+    border: solid 1px #d6dde8;
+    background-color: rgba(243, 247, 249, 0.6);
 }
 
 .avatar-24 {
@@ -188,10 +195,21 @@ hr {
 }
 
 
-.tab-week {
+.tab-week, .tab-month {
     border: solid 1px rgb(229, 229, 229);
 }
 
+.tui-full-calendar-dayname-month-custom {
+    font-size: 16px !important;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    padding-left: 8px;
+    color: #263238;
+    display: block;
+    padding-top: 15px;
+}
 .tui-full-calendar-dayname-date-custom {
     font-size: 16px !important;
     font-weight: 500;
@@ -200,7 +218,8 @@ hr {
     text-align: left;
     padding-left: 8px;
     color: #263238;
-    display: block
+    display: block;
+    padding-top: 3px;
 }
 .tui-full-calendar-dayname-name-custom{
     font-size: 13px;
@@ -224,6 +243,7 @@ hr {
 }
 .modal-sidebar {
     display: block;
+    height: unset !important;
 }
 .modal-header, .modal-body {
     padding: 15px 30px;
@@ -263,4 +283,43 @@ hr {
 .selected > .oval {
     background-color: #fff0ff !important;
     color: #44d6c8 !important;
+}
+.panel-custom-info {
+    border-radius: 4px 4px 0 0;
+    border-bottom: solid 1px #d6dde8;
+    background-color: #ffffff;
+}
+
+.tui-full-calendar-weekday-schedule.tui-full-calendar-weekday-schedule-time {
+    border-left: none !important;
+}
+.tui-full-calendar-weekday-schedule.tui-full-calendar-weekday-schedule-time .tui-full-calendar-weekday-schedule-title {
+    padding-left: 0 !important;
+}
+.tui-full-calendar-weekday-schedule-bullet {
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+.schedule-week-span {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #263238;
+    display: block;
+    font-weight: normal;
+    border-left-style: solid;
+    border-left-width: 3px !important;
+}
+.tui-full-calendar-weekday-grid-header {
+    padding-left: 3px; !important;
+    padding-top: 5px; !important;
+}
+.today-grid-header {
+    background-color: #3e8ef7;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px
+}
+.tui-full-calendar-month-week-item .tui-full-calendar-weekday-schedule {
+    margin-right:8px !important;
 }

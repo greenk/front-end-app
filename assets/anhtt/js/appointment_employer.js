@@ -3,6 +3,7 @@
     var Site = window.Site;
     var _jquery2 = babelHelpers.interopRequireDefault($);
     $(document).ready(function() {
+        var calendar;
         Site.run();
 
         $(document).on('click', '.card-appointment', function () {
@@ -37,7 +38,24 @@
                 prev.after(elementToAdd);
             });
         });
-        rendCalendar();
+        $(document).on('click', '.calendar-tab', function () {
+            if($(this).hasClass('tabWeek')) {
+                $('#calendar').empty();
+                calendar = rendCalendar(themeConfig());
+                calendar.on('clickSchedule', function() {
+                    $('#mdl-appointment-detail').modal('show');
+                });
+                calendar.createSchedules(schedule());
+            }
+            if($(this).hasClass('tabMonth')) {
+                $('#calendar-month').empty();
+                calendar = rendMonthCalendar(themeConfig());
+                calendar.on('clickSchedule', function() {
+                    $('#mdl-appointment-detail').modal('show');
+                });
+                calendar.createSchedules(schedule());
+            }
+        });
         // addDetailElement();
     });
 })(document, window, jQuery);
@@ -118,8 +136,127 @@ function addAppointmentElement(timeDoing) {
 }
 
 // tui-calendar: https://github.com/nhnent/tui.calendar/blob/master/docs/getting-started.md
-function rendCalendar() {
-    var themeConfig = {
+function rendCalendar(themeConfig) {
+    var Calendar = tui.Calendar;
+    return new Calendar('#calendar', {
+        defaultView: 'week',
+        taskView: false,
+        scheduleView: ['time'],
+        isAllDay: false,
+        // useDetailPopup: true,
+        week: {
+            startDayOfWeek: 1,
+            hourStart: 7
+        },
+        theme: themeConfig,
+        template: {
+            weekDayname: function(model) {
+                var splitDatetime = model.renderDate.split("-");
+                var getMonthName = convertMonthNumberToMonthName(splitDatetime[1]);
+                return '<span class="tui-full-calendar-dayname-date-custom">' +
+                    '' +  model.dayName +
+                    '</span><span class="tui-full-calendar-dayname-name-custom">' + splitDatetime[2] + ' ' + getMonthName + '</span>';
+            },
+            time: function(schedule) {
+                $stringAppointment = schedule.title === '1' ? 'appointment' : 'appointments';
+                return '<span style="font-size: 16px; display: block">' + schedule.title +'</span>'  +
+                    '<span style="font-size: 12px; color:#76838f; display: block; opacity: 0.7; font-weight: normal">' +
+                    $stringAppointment + '</span>';
+            },
+            'timegridDisplayPrimayTime' : function(time) {
+
+                return '<span style="    text-align: center;\n' +
+                    '    font-size: 14px;\n' +
+                    '    color: #263238; ">' +  time.hour + ':00' + ' </span>';
+            },
+            'timegridDisplayTime' : function(time) {
+                var meridiem = time.hour < 12 ? 'am' : 'pm';
+
+                return time.hour + ' ' + meridiem;
+            },
+        }
+    });
+
+    // default keys and styles
+}
+function rendMonthCalendar(themeConfig) {
+    var Calendar = tui.Calendar;
+    return new Calendar('#calendar-month', {
+        defaultView: 'month',
+        taskView: false,
+        scheduleView: ['time'],
+        isAllDay: false,
+        // useDetailPopup: true,
+        month: {
+            startDayOfWeek: 1,
+            hourStart: 7
+        },
+        theme: themeConfig,
+        template: {
+            'monthGridHeader': function (model) {
+                var splitDate = model.date.split('-');
+                if (model.isToday) {
+                    return '<div class="today-grid-header">' +
+                        '<p style="color: #ffffff;  text-align: center; font-size: 16px; font-weight: 500;">' +
+                        splitDate[2] + '</p></div>';
+                }
+                return '<p style="color: #76838f; padding-left: 6px; font-size: 16px; font-weight: 500; line-height: 1.25">' + splitDate[2] + '</p>';
+            },
+            'monthGridFooterExceed': function () {
+                return 'XXXXXXXXX'
+            },
+            monthDayname: function(model) {
+                return '<span class="tui-full-calendar-dayname-month-custom">' +
+                    '' +  model.label +
+                    '</span>';
+            },
+            time: function(schedule) {
+                console.log(schedule);
+                $stringAppointment = schedule.title === '1' ? 'appointment' : 'appointments';
+                return '<span class="schedule-week-span" style="background-color: ' + schedule.bgColor + '; border-left-color: ' + schedule.borderColor + '">&ensp;' +
+                    schedule.title + ' ' +$stringAppointment + '</span>';
+            },
+            'timegridDisplayPrimayTime' : function(time) {
+
+                return '<span style="    text-align: center;\n' +
+                    '    font-size: 14px;\n' +
+                    '    color: #263238; ">' +  time.hour + ':00' + ' </span>';
+            },
+            'timegridDisplayTime' : function(time) {
+                var meridiem = time.hour < 12 ? 'am' : 'pm';
+
+                return time.hour + ' ' + meridiem;
+            }
+        }
+    });
+}
+function convertMonthNumberToMonthName(monthNumber) {
+    var months = {
+        "01" : "Jan",
+        "02" : "Feb",
+        "03" : "Mar",
+        "04" : "Apr",
+        "05" : "May",
+        "06" : "Jun",
+        "07" : "Jul",
+        "08" : "Aug",
+        "09" : "Sep",
+        "10" : "Oct",
+        "11" : "Nov",
+        "12" : "Dec"};
+    return months[monthNumber];
+}
+
+function returnBorderColorAndBgColorForSchedule(scheduleId, borderOrBg) {
+    const IS_BORDER = 1;
+    const IS_BACKGROUND = 2;
+    var borderColor = ['#06bc9e', '#ff5583', '#3f51b5', '#bbdc02'];
+    var bgColor = ['#E8F8F5', '#FEEEF2', '#EBEDF7', '#F8FBE4'];
+    return borderOrBg === IS_BORDER ? borderColor[scheduleId % borderColor.length] : bgColor[scheduleId % bgColor.length];
+
+}
+function themeConfig() {
+    return {
         'common.border': '1px solid #e5e5e5',
         'common.backgroundColor': 'white',
         'common.holiday.color': '#263238',
@@ -149,7 +286,7 @@ function rendCalendar() {
 
         // month schedule style
         'month.schedule.borderRadius': '2px',
-        'month.schedule.height': '24px',
+        'month.schedule.height': '28px',
         'month.schedule.marginTop': '2px',
         'month.schedule.marginLeft': '8px',
         'month.schedule.marginRight': '8px',
@@ -240,56 +377,9 @@ function rendCalendar() {
         'week.dayGridSchedule.marginRight': '8px'
     };
 
-    var Calendar = tui.Calendar;
-    var calendar = new Calendar('#calendar', {
-        defaultView: 'week',
-        taskView: false,
-        scheduleView: ['time'],
-        isAllDay: false,
-        useDetailPopup: true,
-        week: {
-            startDayOfWeek: 1,
-            hourStart: 7
-        },
-        theme: themeConfig,
-        template: {
-            weekDayname: function(model) {
-                var splitDatetime = model.renderDate.split("-");
-                var getMonthName = convertMonthNumberToMonthName(splitDatetime[1]);
-                return '<span class="tui-full-calendar-dayname-date-custom">' +
-                    '' +  model.dayName +
-                    '</span><span class="tui-full-calendar-dayname-name-custom">' + splitDatetime[2] + ' ' + getMonthName + '</span>';
-            },
-            time: function(schedule) {
-                $stringAppointment = schedule.title === '1' ? 'appointment' : 'appointments';
-                return '<span style="font-size: 16px; display: block">' + schedule.title +'</span>'  +
-                    '<span style="font-size: 12px; color:#76838f; display: block; opacity: 0.7; font-weight: normal">' +
-                    $stringAppointment + '</span>';
-            },
-            'timegridDisplayPrimayTime' : function(time) {
-
-                return '<span style="    text-align: center;\n' +
-                    '    font-size: 14px;\n' +
-                    '    color: #263238; ">' +  time.hour + ':00' + ' </span>';
-            },
-            'timegridDisplayTime' : function(time) {
-                var meridiem = time.hour < 12 ? 'am' : 'pm';
-
-                return time.hour + ' ' + meridiem;
-            },
-            popupDetailDate: function(isAllDay, start, end) {
-                var isSameDate = moment(start).isSame(end);
-                var endFormat = (isSameDate ? '' : 'YYYY.MM.DD ') + 'hh:mm a';
-                $('#mdl-appointment-detail').modal('show');
-                if (isAllDay) {
-                    return moment(start).format('YYYY.MM.DD') + (isSameDate ? '' : ' - ' + moment(end).format('YYYY.MM.DD'));
-                }
-
-                return (moment(start).format('YYYY.MM.DD hh:mm a') + ' - ' + moment(end).format(endFormat));
-            },
-        }
-    });
-    var schedule = [
+}
+function schedule() {
+    return [
         {
             id: '1',
             calendarId: '1',
@@ -312,18 +402,6 @@ function rendCalendar() {
             isReadOnly: true,    // schedule is read-only
             bgColor: returnBorderColorAndBgColorForSchedule(2, 2),
             borderColor: returnBorderColorAndBgColorForSchedule(2, 1)
-        },
-        {
-            id: '3',
-            calendarId: '1',
-            title: '2',
-            category: 'time',
-            dueDateClass: '',
-            start: '2019-03-11T15:30:00+09:00',
-            end: '2019-03-11T16:00:00+09:00',
-            isReadOnly: true,    // schedule is read-only
-            bgColor: returnBorderColorAndBgColorForSchedule(3, 2),
-            borderColor: returnBorderColorAndBgColorForSchedule(3, 1)
         },
         {
             id: '4',
@@ -362,32 +440,4 @@ function rendCalendar() {
             borderColor: returnBorderColorAndBgColorForSchedule(6, 1)
         }
     ];
-    calendar.createSchedules(schedule);
-
-    // default keys and styles
-}
-function convertMonthNumberToMonthName(monthNumber) {
-    var months = {
-        "01" : "Jan",
-        "02" : "Feb",
-        "03" : "Mar",
-        "04" : "Apr",
-        "05" : "May",
-        "06" : "Jun",
-        "07" : "Jul",
-        "08" : "Aug",
-        "09" : "Sep",
-        "10" : "Oct",
-        "11" : "Nov",
-        "12" : "Dec"};
-    return months[monthNumber];
-}
-
-function returnBorderColorAndBgColorForSchedule(scheduleId, borderOrBg) {
-    const IS_BORDER = 1;
-    const IS_BACKGROUND = 2;
-    var borderColor = ['#06bc9e', '#ff5583', '#3f51b5', '#bbdc02'];
-    var bgColor = ['#E8F8F5', '#FEEEF2', '#EBEDF7', '#F8FBE4'];
-    return borderOrBg === IS_BORDER ? borderColor[scheduleId % borderColor.length] : bgColor[scheduleId % bgColor.length];
-
 }

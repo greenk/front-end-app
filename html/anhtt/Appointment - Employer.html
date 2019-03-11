@@ -1609,11 +1609,11 @@
                             <div class="col-12 float-left">
                                 <div class="nav-tabs-horizontal" data-plugin="tabs">
                                     <ul class="nav nav-tabs calendar-nav-tab float-left" role="tablist">
-                                        <li class="nav-item calendar-tab" role="presentation"><a class="nav-link border-radius-left" data-toggle="tab" href="#tabDate"
+                                        <li class="nav-item calendar-tab tabDate" role="presentation"><a class="nav-link calendar-tab-a active border-radius-left" data-toggle="tab" href="#tabDate"
                                                                                     aria-controls="exampleTabsOne" role="tab">Date</a></li>
-                                        <li class="nav-item calendar-tab" role="presentation"><a class="nav-link border-radius-0 active" data-toggle="tab" href="#tabWeek"
+                                        <li class="nav-item calendar-tab tabWeek" role="presentation"><a class="nav-link calendar-tab-a border-radius-0" data-toggle="tab" href="#tabWeek"
                                                                                     aria-controls="exampleTabsTwo" role="tab">Week</a></li>
-                                        <li class="nav-item calendar-tab" role="presentation"><a class="nav-link  border-radius-right" data-toggle="tab" href="#tabMonth"
+                                        <li class="nav-item calendar-tab tabMonth" role="presentation"><a class="nav-link calendar-tab-a  border-radius-right" data-toggle="tab" href="#tabMonth"
                                                                                     aria-controls="exampleTabsThree" role="tab">Month</a></li>
                                     </ul>
                                     <div class="btn-group single-group" aria-label="Basic example" role="group">
@@ -1630,7 +1630,7 @@
                         <div class="row appointment-detail-day">
                             <div class="col-12">
                                 <div class="tab-content">
-                                    <div class="tab-pane" id="tabDate" role="tabpanel">
+                                    <div class="tab-pane active" id="tabDate" role="tabpanel">
                                         <div class="row ">
                                             <div class="col-4">
                                                 <div class="heading-note">
@@ -1712,16 +1712,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane active tab-week" id="tabWeek" role="tabpanel">
+                                    <div class="tab-pane tab-week" id="tabWeek" role="tabpanel">
                                         <div id="calendar" style="height: 600px;">
 
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="tabMonth" role="tabpanel">
-                                        Benivole horrent tantalo fuisset adamare fugiendam tractatos indicaverunt animis
-                                        chaere, brevi minuendas, ubi angoribus iisque deorsum audita
-                                        haec dedocendi utilitas. Panaetium erimus platonem varias
-                                        imperitos animum, iudiciorumque operis multa disputando.
+                                    <div class="tab-pane tab-month" id="tabMonth" role="tabpanel">
+                                        <div id="calendar-month" style="height: 600px">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1746,7 +1745,7 @@
                 </button>
                 <div class="modal-title clearfix">
                     <h1 class="page-title">27 November 2018</h1>
-                    <p class="breadcrumb-item active font-size-16 mb-0">8 appointments</p>
+                    <p class="breadcrumb-item active font-size-16 mb-0">8 Appointments</p>
                 </div>
             </div>
             <div class="modal-body">
@@ -1793,22 +1792,25 @@
 
                 <!-- Panel -->
                 <div class="panel mb-15 nn-panel nn-panel-success">
-                    <div class="panel-body pt-15 px-15 pb-10">
+                    <div class="panel-body panel-custom-info pt-15 px-15 pb-10">
                         <div class="custom-inform">
                             <div class="avatar-custom float-left">
                                 <a class="avatar avatar-37">
                                     <img src="../../assets/portraits/21.jpg" alt="">
                                 </a>
                             </div>
-                            <div class="name-phone-div">
-                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-50 mb-0">Sukhmeet Gorae</p>
-                                <a class="color-gray ml-15"><i class="far fa-phone fa-rotate-270"></i> 481-175-9553</a>
+                            <div class="name-phone-div float-left">
+                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-10 pt-5 mb-0">Sukhmeet Gorae</p>
+                                <!--<a class="color-gray ml-15"><i class="fas fa-phone"></i> 481-175-9553</a>-->
+                            </div>
+                            <div class="action-div pull-right">
+                                <button type="button" class="btn btn-outline btn-default icon-btn mr-10"><i class="nn-color-gray far fa-trash-alt" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-outline btn-default icon-btn"><i class="color-blue fas fa-pencil-alt" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
-                    <hr>
                     <div class="panel-body pt-15 px-15 pb-10">
-                        <p class="nn-color-black monthly-p color-gray-1 font-size-12 font-weight-500 mb-0">Request Services</p>
+                        <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Request Services</p>
                         <div class="list-service">
                             <div class="service float-left">
                                 Manicure
@@ -1822,59 +1824,33 @@
                         </div>
                     </div>
                     <div class="panel-body pt-0 px-15 pb-10">
-                        <p class="nn-color-black monthly-p color-gray-1 font-size-12 font-weight-500 mb-0">Request Nail Tech</p>
-                        <div class="nail-tech-info">
-                            <div class="avatar-custom float-left">
-                                <a class="avatar avatar-24">
-                                    <img src="../../assets/portraits/21.jpg" alt="">
-                                </a>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Request Nail Tech</p>
+                                <div class="nail-tech-info">
+                                    <div class="avatar-custom float-left">
+                                        <a class="avatar avatar-24">
+                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="name-phone-div">
+                                        <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">Anna Fali</p>
+                                        <p class="">&ensp;(Anna)</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="name-phone-div">
-                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">Anna Fali</p>
-                                <p class="">&ensp;(Anna)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Panel -->
-                <!-- Panel -->
-                <div class="panel mb-15 nn-panel nn-panel-success">
-                    <div class="panel-body pt-15 px-15 pb-10">
-                        <div class="custom-inform">
-                            <div class="avatar-custom float-left">
-                                <a class="avatar avatar-37">
-                                    <img src="../../assets/portraits/21.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name-phone-div">
-                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-50 mb-0">Hemchandra Chakravorty</p>
-                                <a class="color-gray ml-15"><i class="far fa-phone fa-rotate-270"></i> 503-101-2614</a>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="panel-body pt-15 px-15 pb-10">
-                        <p class="nn-color-black monthly-p color-gray-1 font-size-12 font-weight-500 mb-0">Request Services</p>
-                        <div class="list-service">
-                            <div class="service float-left">
-                                Manicure
-                            </div>
-                            <div class="service float-left">
-                                Pedicure
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body pt-0 px-15 pb-10">
-                        <p class="nn-color-black monthly-p color-gray-1 font-size-12 font-weight-500 mb-0">Request Nail Tech</p>
-                        <div class="nail-tech-info">
-                            <div class="avatar-custom float-left">
-                                <a class="avatar avatar-24">
-                                    <img src="../../assets/portraits/21.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name-phone-div">
-                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">Stepan Assonov</p>
-                                <p class="">&ensp;(Stepan)</p>
+                            <div class="col-6">
+                                <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Phone Number</p>
+                                <div class="nail-tech-info">
+                                    <div class="avatar-custom float-left">
+                                        <a class="avatar avatar-24">
+                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="name-phone-div">
+                                        <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">481-175-9553</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1882,22 +1858,25 @@
                 <!-- End Panel -->
                 <!-- Panel -->
                 <div class="panel mb-15 nn-panel nn-panel-success">
-                    <div class="panel-body pt-15 px-15 pb-10">
+                    <div class="panel-body panel-custom-info pt-15 px-15 pb-10">
                         <div class="custom-inform">
                             <div class="avatar-custom float-left">
                                 <a class="avatar avatar-37">
                                     <img src="../../assets/portraits/21.jpg" alt="">
                                 </a>
                             </div>
-                            <div class="name-phone-div">
-                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-50 mb-0">Carolien Bloeme</p>
-                                <a class="color-gray ml-15"><i class="far fa-phone fa-rotate-270"></i> 910-650-2773</a>
+                            <div class="name-phone-div float-left">
+                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-10 pt-5 mb-0">Sukhmeet Gorae</p>
+                                <!--<a class="color-gray ml-15"><i class="fas fa-phone"></i> 481-175-9553</a>-->
+                            </div>
+                            <div class="action-div pull-right">
+                                <button type="button" class="btn btn-outline btn-default icon-btn mr-10"><i class="nn-color-gray far fa-trash-alt" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-outline btn-default icon-btn"><i class="color-blue fas fa-pencil-alt" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
-                    <hr>
                     <div class="panel-body pt-15 px-15 pb-10">
-                        <p class="nn-color-black monthly-p color-gray-1 font-size-12 font-weight-500 mb-0">Request Services</p>
+                        <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Request Services</p>
                         <div class="list-service">
                             <div class="service float-left">
                                 Manicure
@@ -1905,19 +1884,105 @@
                             <div class="service float-left">
                                 Pedicure
                             </div>
+                            <div class="service float-left">
+                                Gel Polish
+                            </div>
                         </div>
                     </div>
                     <div class="panel-body pt-0 px-15 pb-10">
-                        <p class="nn-color-black monthly-p color-gray-1 font-size-12 font-weight-500 mb-0">Request Nail Tech</p>
-                        <div class="nail-tech-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Request Nail Tech</p>
+                                <div class="nail-tech-info">
+                                    <div class="avatar-custom float-left">
+                                        <a class="avatar avatar-24">
+                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="name-phone-div">
+                                        <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">Anna Fali</p>
+                                        <p class="">&ensp;(Anna)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Phone Number</p>
+                                <div class="nail-tech-info">
+                                    <div class="avatar-custom float-left">
+                                        <a class="avatar avatar-24">
+                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="name-phone-div">
+                                        <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">481-175-9553</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Panel -->
+                <!-- Panel -->
+                <div class="panel mb-15 nn-panel nn-panel-success">
+                    <div class="panel-body panel-custom-info pt-15 px-15 pb-10">
+                        <div class="custom-inform">
                             <div class="avatar-custom float-left">
-                                <a class="avatar avatar-24">
+                                <a class="avatar avatar-37">
                                     <img src="../../assets/portraits/21.jpg" alt="">
                                 </a>
                             </div>
-                            <div class="name-phone-div">
-                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">Caspar Sawrey</p>
-                                <p class="">&ensp;(Cas)</p>
+                            <div class="name-phone-div float-left">
+                                <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-10 pt-5 mb-0">Sukhmeet Gorae</p>
+                                <!--<a class="color-gray ml-15"><i class="fas fa-phone"></i> 481-175-9553</a>-->
+                            </div>
+                            <div class="action-div pull-right">
+                                <button type="button" class="btn btn-outline btn-default icon-btn mr-10"><i class="nn-color-gray far fa-trash-alt" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-outline btn-default icon-btn"><i class="color-blue fas fa-pencil-alt" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body pt-15 px-15 pb-10">
+                        <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Request Services</p>
+                        <div class="list-service">
+                            <div class="service float-left">
+                                Manicure
+                            </div>
+                            <div class="service float-left">
+                                Pedicure
+                            </div>
+                            <div class="service float-left">
+                                Gel Polish
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body pt-0 px-15 pb-10">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Request Nail Tech</p>
+                                <div class="nail-tech-info">
+                                    <div class="avatar-custom float-left">
+                                        <a class="avatar avatar-24">
+                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="name-phone-div">
+                                        <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">Anna Fali</p>
+                                        <p class="">&ensp;(Anna)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <p class="color-gray-1 monthly-p color-gray-1 font-size-12 mb-0">Phone Number</p>
+                                <div class="nail-tech-info">
+                                    <div class="avatar-custom float-left">
+                                        <a class="avatar avatar-24">
+                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="name-phone-div">
+                                        <p class="nn-color-black monthly-p font-size-16 font-weight-500 ml-15 mb-0 float-left">481-175-9553</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
