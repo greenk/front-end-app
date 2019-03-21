@@ -189,7 +189,7 @@ hr {
     width: 50%;
     color: #2c3a4a !important;
 }
-.fa-trash-alt, .fa-pencil-alt {
+.fa-trash-alt, .fa-pencil-alt, .fa-long-arrow-right {
     color: #ccd5db;
     font-size: 18px;
 }
@@ -322,4 +322,11 @@ hr {
 }
 .tui-full-calendar-month-week-item .tui-full-calendar-weekday-schedule {
     margin-right:8px !important;
+}
+
+.color-3e8ef7 {
+    color: #3e8ef7;
+}
+.nn-color-666666 {
+    color: #666666;
 }
