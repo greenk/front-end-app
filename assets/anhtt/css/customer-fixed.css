@@ -1,0 +1,111 @@
+
+.panel {
+    box-shadow: none;
+    background: none;
+}
+.left-img-bg {
+    background-image: url("../../anhtt/images/finger-hands.jpeg");
+    width: auto;
+    height: 100%;
+    border-radius: 100% / 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-position: center;
+}
+.height-100 {
+    height: 100%;
+}
+.orinail-and-spa {
+    font-family: AbrilFatface;
+    font-size: 32px;
+}
+.font-size-32 {
+    font-size: 32px !important;
+}
+.btn-customer-signin {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12);
+    background-image: linear-gradient(253deg, #26c6bc, #0aa797);
+    margin-top: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.have-appointment {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12);
+    background-image: linear-gradient(81deg, #044ec8, #02bfc6);
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-top: 20px;
+}
+.return-customer {
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12);
+    background-image: linear-gradient(73deg, #d8924b, #f9ad65);
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-top: 20px;
+}
+.child-sign {
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12);
+    background-image: linear-gradient(63deg, #eb1632, #ff95ad);
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-top: 20px;
+}
+.btn-service {
+    border-radius: 22px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.12);
+    font-size: 18px;
+}
+.fas.fa-plus {
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.submit-request-service {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: #17b3a3;
+    color: #fff;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+.color-black-fixed {
+    color: #263238;
+}
