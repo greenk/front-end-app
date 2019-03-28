@@ -100,7 +100,6 @@
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: normal;
     text-align: center;
     padding-top: 22px;
@@ -108,4 +107,115 @@
 }
 .color-black-fixed {
     color: #263238;
+}
+.h-55 {
+    height: 55px;
+}
+.w-100-p {
+    width: 100%;
+}
+.font-size-22 {
+    font-size: 22px !important;
+}
+.btn-full-width {
+    border-radius: 4px;
+    background-color: #017d96;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.btn-child > span.fa-plus-circle {
+    line-height: 1.5;
+}
+.line-height-2 {
+    line-height: 2;
+}
+.fa-user-plus {
+    cursor: pointer;
+}
+.modal-sidebar {
+    display: block;
+    height: unset !important;
+    width: 50%;
+}
+.modal-header {
+    box-shadow: inset 0 -1px 0 0 #f1f4f5 !important;
+    background-color: #ffffff !important;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        min-width: 500px;
+    }
+}
+.badge.badge-info{
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #17b3a3;
+    color: #fff;
+    font-size: 16px;
+}
+.avatar-64 {
+    width: 64px;
+    height: 64px;
+    padding-top: 10px;
+}
+.avatar img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    border-radius: 1000px;
+}
+.nail-tech-and-time {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: none;
+}
+.nail-tech-and-time.active {
+    border-radius: 4px !important;
+    background-color: #17b3a3 !important;
+    border: none !important;
+}
+.nail-tech-and-time > div > button.btn-select-nail-text {
+    background-color: #fff;
+    display: none;
+    color: #76838f;
+    text-align: center;
+}
+.nail-tech-and-time.active > div > button.btn-select-nail-text {
+    background-color: #fff;
+    display: block !important;
+    color: #76838f;
+    text-align: center;
+}
+
+.nail-tech-and-time > div > h3 {
+    color: #2c3a4a;
+}
+.nail-tech-and-time > div > p{
+    color: #76838f;
+}
+.nail-tech-and-time.active > div > h3, .nail-tech-and-time.active > div > p {
+    color: #fff;
+}
+.select-service {
+    padding: 15px 15px 10px 0;
+}
+.input-clear-btn {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    height: 100%;
+    padding: 0 10px;
+    background: 0 0;
+    border: none;
+    border-radius: 0 200px 200px 0;
+}
+.btn-do-same {
+    border-radius: 4px;
+    background-color: #008577;
+    color: #ffffff;
 }

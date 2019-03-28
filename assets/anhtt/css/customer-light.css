@@ -129,3 +129,89 @@
     background-color: #ffffff;
     color: #263238;
 }
+.input-border {
+    border-radius: 4px;
+    border: solid 1.5px #76838f;
+    background-color: #ffffff
+}
+.btn-back {
+    border-radius: 4px;
+    border: solid 1.5px #ccd5db;
+    background-color: #ffffff;
+}
+.btn-child {
+    border-radius: 4px;
+    background-color: #0cb2d4;
+    width: 100%;
+    color: #fff;
+}
+.bg-17b3a3 {
+    border: 0;
+    border-top: solid 1px #17b3a3;
+}
+.btn-full-width-white {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #263238;
+    padding: 20px;
+}
+.fa-user-plus, .fa-trash-alt {
+    color: #76838f;
+    border-radius: 4px;
+    border: solid 1px #d6dde8;
+    background-color: #ffffff;
+    padding: 5px;
+}
+.input-search .form-control, .search-by-phone {
+    border-radius: 4px;
+    border: solid 1.5px #76838f;
+    background-color: #ffffff;
+}
+
+
+.nail-tech-and-time-select {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: none;
+}
+.nail-tech-and-time-select > div > button.btn-select-nail-text {
+    background-color: #fff;
+    color: #76838f;
+    text-align: center;
+}
+.nail-tech-and-time-select > div > h3 {
+    color: #2c3a4a;
+}
+.nail-tech-and-time-select > div > p{
+    color: #76838f;
+}
+.checkbox-custom label::before {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -20px;
+    content: "";
+    background-color: #fff;
+    border: 2px solid #263238;
+    border-radius: .215rem;
+    transition: all .3s ease-in-out 0s;
+}
+.bg-f3f7f9 {
+    border-radius: 4px;
+    background-color: #f3f7f9;
+}
+.ticket-detail {
+    padding: 20px 0 20px 40px;
+    border-radius: 4px;
+    background-color: #f3f7f9;
+}
