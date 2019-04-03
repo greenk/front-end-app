@@ -1,0 +1,39 @@
+.panel-title {
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0 -1px 0 0 #f1f4f5;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.pearl.active .pearl-icon, .pearl.active .pearl-number {
+    color: #fff;
+    background-color: #44d6c8;
+    border: none;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    font-weight: 500;
+    line-height: 2;
+}
+.pearl.done .pearl-icon, .pearl.done .pearl-number{
+    color: #44d6c8;
+    background-color: #fff;
+    border: solid 1px #44d6c8;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    font-weight: 500;
+    line-height: 2;
+}
+.pearl.active:after, .pearl.active:before, .pearl.current:after, .pearl.current:before {
+    background-color: #44d6c8;
+}
+.pearl.done:after, .pearl.done:before {
+    background-color: #44d6c8;
+}
+span.pearl-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #76838f;
+}
+.pearl.active > span.pearl-title {
+    color: #2c3a4a !important;
+}
