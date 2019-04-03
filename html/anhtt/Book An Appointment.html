@@ -8,7 +8,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
 
-    <title>Gift Card Management</title>
+    <title>Book An Appointment</title>
 
     <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="../../assets/images/favicon.ico">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../../assets/vendor/flag-icon-css/flag-icon.css">
     <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick.css">
     <link rel="stylesheet" href="../../assets/anhtt/css/appointment_employer.css">
-    <link rel="stylesheet" href="../../assets/anhtt/css/gift-card.css">
+    <link rel="stylesheet" href="../../assets/anhtt/css/book_appointment.css">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
 
 
@@ -1580,46 +1580,57 @@
 <!-- Page -->
 <div class="page">
     <div class="page-header">
-        <h1 class="page-title">Gift Card Management</h1>
+        <h1 class="page-title">Book An Appointment</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-            <li class="breadcrumb-item">Gift Card Management</li>
-            <li class="breadcrumb-item active">Information</li>
+            <li class="breadcrumb-item"><a href="../index.html">Work</a></li>
+            <li class="breadcrumb-item">Customers</li>
+            <li class="breadcrumb-item active">Book An Appointment</li>
         </ol>
-        <!--<div class="page-header-actions">-->
-            <!--<a class="avatar avatar-54">-->
-                <!--<img src="../../assets/portraits/21.jpg" alt="">-->
-            <!--</a>-->
-        <!--</div>-->
     </div>
     <div class="page-content container-fluid">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-height-530">
-                    <div class="panel-heading position-relative panel-height-280">
-                        <div class="position-absolute left-50">
-                            <div class="position-relative left--50 top-60">
-                                <img width="190px" height="218px" src="../../assets/anhtt/images/scan.svg">
+            <div class="col-12">
+                <div class="panel">
+                    <div class="panel-body row panel-height-400">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="right-background-img">
                             </div>
                         </div>
-                    </div>
-                    <div class="panel-body pt-0">
-                        <h1 class="nn-color-black panel-title gift-card-title">Scan Giftcard</h1>
-                        <div class="row">
-                            <div class="col-4 offset-4 pl-0 pr-0">
-                                <div class="form-group">
-                                    <div class="input-group scan-barcode-input input-group-lg">
-                                        <input type="text" class="form-control no-border-right nn-color-black font-size-20" placeholder="" value="">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text far fa-long-arrow-right"></span>
-                                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <h4 class="font-size-20 nn-color-black mb-0">A little bit about you</h4>
+                            <form autocomplete="off">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-control-label" for="inputBasicFirstName">First Name</label>
+                                        <input type="text" class="form-control font-weight-normal font-size-16 nn-color-black form-control-lg" id="inputBasicFirstName" name="inputFirstName"
+                                               placeholder="First Name" value="Jozef" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-control-label" for="inputBasicLastName">Last Name</label>
+                                        <input type="text" class="form-control font-weight-normal font-size-16 nn-color-black form-control-lg" id="inputBasicLastName" name="inputLastName"
+                                               placeholder="Last Name" value="Kondratovich" />
                                     </div>
                                 </div>
-                                <p class="text-center nn-color-gray font-size-16">
-                                    Please scan the barcode on your Gift Card
-                                    to view detailed information
-                                </p>
-                            </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="inputBasicEmail">Phone Number</label>
+                                    <input type="email" class="form-control font-weight-normal font-size-16 nn-color-black form-control-lg" value="481-175-9553" name="inputEmail"
+                                           placeholder="" autocomplete="off" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="inputBasicEmail">Email Address</label>
+                                    <input type="email" class="form-control nn-color-black font-weight-normal font-size-16 form-control-lg" id="inputBasicEmail" name="inputEmail"
+                                           placeholder="Email Address" value="jozef950@yahoo.com" />
+                                </div>
+                                <div class="form-group mb-15">
+                                    <button type="button" class="btn btn-primary start-book-appointment">Start To Book An Appointment</button>
+                                </div>
+                                <h4 class="background font-size-16 nn-color-ccd5db font-weight-normal"><span>Or</span></h4>
+                                <div class="form-group mt-15">
+                                    <button type="button" class="btn btn-primary already-appointment">Already Had An Appointment?</button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>

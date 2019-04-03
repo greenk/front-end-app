@@ -1,0 +1,62 @@
+.right-background-img {
+    background-image: url(../images/talk.PNG);
+    width: 100%;
+    padding-top: 100%;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin: 15px;
+}
+.panel-height-400 {
+    min-height: 400px;
+}
+.start-book-appointment {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #18bbad;
+    font-size: 16px;
+    min-height: 45px;
+}
+h4.background {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+h4.background::before {
+     border-top: 2px solid #dfdfdf;
+     content:"";
+     margin: 0 auto; /* this centers the line to the full width specified */
+     position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+     top: 50%; left: 0; right: 0; bottom: 0;
+     width: 100%;
+     z-index: -1;
+ }
+
+h4.background>span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    background: #fff;
+    padding: 0 15px;
+}
+
+.nn-color-ccd5db {
+    color: #ccd5db;
+}
+.already-appointment {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #1de8b6;
+    border: none;
+    font-size: 16px;
+    min-height: 45px;
+}
+.form-group {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.form-group > label {
+    font-size: 16px;
+}
