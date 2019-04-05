@@ -28,7 +28,10 @@
     <link rel="stylesheet" href="../../assets/vendor/jquery-wizard/jquery-wizard.css">
     <link rel="stylesheet" href="../../assets/vendor/formvalidation/formValidation.css">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
-
+    <link rel="stylesheet" href="../../assets/custom-vendor/font-awesome-5/css/all.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-design/material-design.css">
+    <link rel="stylesheet" href="../../assets/vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick.css">
     <link rel="stylesheet" href="../../assets/vendor/select2/select2.css">
     <link rel="stylesheet" href="../../assets/anhtt/css/appointment_employer.css">
     <link rel="stylesheet" href="../../assets/anhtt/css/book_appointment_process.css">
@@ -1604,7 +1607,7 @@
                 <!-- Panel Wizard Form Container -->
                 <div class="panel" id="exampleWizardFormContainer">
                     <div class="panel-heading">
-                        <h3 class="panel-title mb-15">Book An Appointment</h3>
+                        <h3 class="panel-title mb-15">Jozef Kondratovich<i class="ml-15 nn-color-black fa fa-pencil-alt"></i></h3>
                     </div>
                     <div class="panel-body">
                         <!-- Steps -->
@@ -1612,6 +1615,8 @@
                             <div class="pearl active col-3">
                                 <div class="pearl-icon">1</div>
                                 <span class="pearl-title d-none d-md-block">Select Date & Time</span>
+                                <span class="pearl-selected nn-color-black font-size-12 font-weight-500">19 Oct - 17:00 pm</span>
+
                             </div>
                             <div class="pearl col-3">
                                 <div class="pearl-icon">2</div>
@@ -1633,141 +1638,341 @@
                             <div class="wizard-content">
                                 <div class="wizard-pane active" id="exampleAccountOne" role="tabpanel">
                                     <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <h4 class="my-20 text-center">Select Date</h4>
+                                        <div class="col-lg-5 col-12">
+                                            <h4 class="my-20 text-center"><span class="fa fa-calendar-alt nn-color-666666 font-weight-normal pr-10"></span>Select Date</h4>
                                             <div class="select-date">
                                                 <div id="inlineDatepicker" data-autoclose="false" data-date="06/30/2018"></div>
                                                 <input type="hidden" id="inputHiddenInline" />
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 col-12">
-                                            <h4 class="my-20 text-center">Select Time</h4>
+                                        <div class="col-lg-7 col-12">
+                                            <h4 class="my-20 text-center"><span class="fa fa-clock nn-color-666666 font-weight-normal pr-10"></span>Select Time</h4>
                                             <div class="row">
                                                 <div class="col-4">
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">10:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">10:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">11:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">11:30 am</button>
+                                                    <h4 class="my-20 text-center nn-color-black font-size-14 text-center">Morning</h4>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">10:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">10:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">11:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">11:30</button>
                                                 </div>
                                                 <div class="col-4">
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">12:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">12:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">13:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">13:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">14:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">14:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">15:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">15:30 am</button>
+                                                    <h4 class="my-20 text-center nn-color-black font-size-14 text-center">Morning</h4>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">12:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">12:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">13:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">13:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">14:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">14:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">15:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">15:30</button>
                                                 </div>
                                                 <div class="col-4">
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">16:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">16:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">17:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">17:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">18:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">18:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">19:00 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">19:30 am</button>
-                                                    <button type="button" class="btn btn-primary btn-time waves-effect waves-round waves-light waves-effect waves-classic">20:00 am</button>
+                                                    <h4 class="my-20 text-center nn-color-black font-size-14 text-center">Morning</h4>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">16:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">16:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">17:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">17:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">18:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">18:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">19:00</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">19:30</button>
+                                                    <button type="button" class="btn btn-time waves-effect waves-round waves-light waves-effect waves-classic">20:00</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="wizard-pane div-select-service" id="exampleBillingOne" role="tabpanel">
-                                    <h4 class="my-20">Select Service</h4>
+                                    <h4 class="my-20 text-center font-size-16 font-weight-500">Select Service</h4>
                                     <div class="row">
-                                        <div class="col-lg-4 col-12">
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-menicure" name="sv-menicure" autocomplete="off">
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-menicure" name="sv-menicure" autocomplete="off">
                                                 <label for="sv-menicure">Manicure</label>
                                             </div>
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-penicure" name="sv-penicure" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-penicure" name="sv-penicure" autocomplete="off">
                                                 <label for="sv-penicure">Penicure</label>
                                             </div>
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-manipeni-combo" name="sv-manipeni-combo" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-manipeni-combo" name="sv-manipeni-combo" autocomplete="off">
                                                 <label for="sv-manipeni-combo">Mani/Peni Combo</label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-12">
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-gel-polish" name="sv-gel-polish" autocomplete="off">
+
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-gel-polish" name="sv-gel-polish" autocomplete="off">
                                                 <label for="sv-gel-polish">Gel Polish</label>
                                             </div>
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-dipping" name="sv-dipping" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-dipping" name="sv-dipping" autocomplete="off">
                                                 <label for="sv-dipping">Dipping</label>
                                             </div>
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-acrylic" name="sv-acrylic" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-acrylic" name="sv-acrylic" autocomplete="off">
                                                 <label for="sv-acrylic">Acrylic</label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-12">
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-waxing" name="sv-waxing" autocomplete="off">
+
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-waxing" name="sv-waxing" autocomplete="off">
                                                 <label for="sv-waxing">Waxing</label>
                                             </div>
-                                            <div class="checkbox-custom checkbox-primary">
-                                                <input type="checkbox" id="sv-additional-service" name="sv-additional-service" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="checkbox-custom checkbox-success-custom">
+                                                <input class="service-select" type="checkbox" id="sv-additional-service" name="sv-additional-service" autocomplete="off">
                                                 <label for="sv-additional-service">Additional Service</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="wizard-pane div-nailtech" id="exampleGettingOne" role="tabpanel">
-                                    <div class="text-center my-20">
-                                        <h4>Do you request for a Nailtech?</h4>
-                                        <div class="my-20">
-                                            <div class="radio-custom radio-primary radio-inline">
-                                                <input type="radio" id="cb-confirm-yes" name="cb-confirm">
-                                                <label for="cb-confirm-yes">Yes</label>
-                                            </div>
-                                            <div class="radio-custom radio-primary radio-inline">
-                                                <input type="radio" id="cb-confirm-no" name="cb-confirm">
-                                                <label for="cb-confirm-no">No</label>
+                                    <h4 class="my-20 text-center font-size-16 font-weight-500">Most Recent Nail Techs</h4>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="slider" id="choose-nailtech">
+                                                <div class="card open-modal selected bg-white">
+                                                    <div class="card-header p-10 card-heading-avail">
+                                                        <h3 class="text-center panel-heading-avail color-white font-size-12 font-weight-normal mb-0">
+                                                            <span class="fa fa-check-circle"></span>
+                                                            Available</h3>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <div class="avatar avatar-54">
+                                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                                        </div>
+                                                        <h3 class="color-black font-size-14 font-weight-500 mb-0 mt-10">Anna Fali</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-20">17:00 pm - 17:30 pm</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="card bg-white">
+                                                    <div class="card-header p-10 card-heading-no-avail">
+                                                        <h3 class="text-center panel-heading-no-avail color-white font-size-12 font-weight-normal mb-0">
+                                                            <span class="fa fa-times-circle"></span>
+                                                            Not Available</h3>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <div class="avatar avatar-54">
+                                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                                        </div>
+                                                        <h3 class="color-black font-size-14 font-weight-500 mb-0 mt-10">Anna Fali</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-20">Suggest Time<span class="fa fa-angle-right nn-color-gray pl-10"></span></h3>
+                                                    </div>
+                                                </div>
+                                                <div class="card open-modal bg-white">
+                                                    <div class="card-header p-10 card-heading-avail">
+                                                        <h3 class="text-center panel-heading-avail color-white font-size-12 font-weight-normal mb-0">
+                                                            <span class="fa fa-check-circle"></span>
+                                                            Available</h3>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <div class="avatar avatar-54">
+                                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                                        </div>
+                                                        <h3 class="color-black font-size-14 font-weight-500 mb-0 mt-10">Anna Fali</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-20">17:00 pm - 17:30 pm</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="card open-modal bg-white">
+                                                    <div class="card-header p-10 card-heading-avail">
+                                                        <h3 class="text-center panel-heading-avail color-white font-size-12 font-weight-normal mb-0">
+                                                            <span class="fa fa-check-circle"></span>
+                                                            Available</h3>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <div class="avatar avatar-54">
+                                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                                        </div>
+                                                        <h3 class="color-black font-size-14 font-weight-500 mb-0 mt-10">Anna Fali</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                        <h3 class="color-gray font-size-12 font-weight-normal mb-0 mt-20">17:00 pm - 17:30 pm</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="card open-modal bg-white">
+                                                    <div class="card-header p-10 card-heading-avail">
+                                                        <h3 class="text-center panel-heading-avail color-white font-size-12 font-weight-normal mb-0">
+                                                            <span class="fa fa-check-circle"></span>
+                                                            Available</h3>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <div class="avatar avatar-54">
+                                                            <img src="../../assets/portraits/21.jpg" alt="">
+                                                        </div>
+                                                        <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Anna Fali</h3>
+                                                        <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                        <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-20">17:00 pm - 17:30 pm</h3>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row d-none">
-                                        <div class="col-lg-4 offset-lg-4 col-12">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="inp-nailtech">Nailtech work on date</label>
-                                                <select class="form-control" data-plugin="select2" data-placeholder="Nailtech name"
-                                                        data-allow-clear="true">
-                                                    <option></option>
-                                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                        <option value="AK">Alaska</option>
-                                                        <option value="HI">Hawaii</option>
-                                                    </optgroup>
-                                                    <optgroup label="Pacific Time Zone">
-                                                        <option value="CA">California</option>
-                                                        <option value="NV">Nevada</option>
-                                                        <option value="OR">Oregon</option>
-                                                        <option value="WA">Washington</option>
-                                                    </optgroup>
-                                                </select>
+                                        <div class="col-12">
+                                            <h4 class="my-20 text-center font-size-16 font-weight-500">Available Nail Techs</h4>
+                                            <div class="row">
+                                                <div class="offset-md-3 col-sm-12 col-md-6">
+                                                    <div class="input-search float-left w-100-p">
+                                                        <button type="submit" class="input-search-btn "><i class="icon wb-search font-size-18" aria-hidden="true"></i></button>
+                                                        <input type="text" class="form-control form-control-lg border-radius-4" name="" placeholder="Search by phone number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-35">
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="card bg-white avail-nail-tech mb-20">
+                                                        <div class="card-body text-center card-ready-tech">
+                                                            <div class="avatar avatar-54 nailtect-avatar">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-nailtech">
+                                                                <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Stina Gunnarsdottir</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">17:00 pm - 17:30 pm</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="card bg-white avail-nail-tech mb-20">
+                                                        <div class="card-body text-center card-ready-tech">
+                                                            <div class="avatar avatar-54 nailtect-avatar">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-nailtech">
+                                                                <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Stina Gunnarsdottir</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">17:00 pm - 17:30 pm</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="card bg-white avail-nail-tech mb-20">
+                                                        <div class="card-body text-center card-ready-tech">
+                                                            <div class="avatar avatar-54 nailtect-avatar">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-nailtech">
+                                                                <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Stina Gunnarsdottir</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">17:00 pm - 17:30 pm</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="card bg-white avail-nail-tech mb-20">
+                                                        <div class="card-body text-center card-ready-tech">
+                                                            <div class="avatar avatar-54 nailtect-avatar">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-nailtech">
+                                                                <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Stina Gunnarsdottir</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">17:00 pm - 17:30 pm</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="card bg-white avail-nail-tech mb-20">
+                                                        <div class="card-body text-center card-ready-tech">
+                                                            <div class="avatar avatar-54 nailtect-avatar">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-nailtech">
+                                                                <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Stina Gunnarsdottir</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">17:00 pm - 17:30 pm</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="card bg-white avail-nail-tech mb-20">
+                                                        <div class="card-body text-center card-ready-tech">
+                                                            <div class="avatar avatar-54 nailtect-avatar">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-nailtech">
+                                                                <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Stina Gunnarsdottir</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">17:00 pm - 17:30 pm</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="card bg-white avail-nail-tech mb-20">
+                                                        <div class="card-body text-center card-ready-tech">
+                                                            <div class="avatar avatar-54 nailtect-avatar">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="info-nailtech">
+                                                                <h3 class="nn-color-black font-size-14 font-weight-500 mb-0 mt-10">Stina Gunnarsdottir</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">17:00 pm - 17:30 pm</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="wizard-pane div-confirm" role="tabpanel">
-                                    <div class="text-center my-20">
-                                        <h4>Mary</h4>
-                                        <h4>Thursday, 15/06/2018</h4>
-                                        <h4>7:30</h4>
-                                        <p>For:</p>
-                                        <div class="service-list">
-                                            <div class="sv-manicure">
-                                                <button type="button" class="btn btn-primary waves-effect waves-round waves-light waves-effect waves-classic">Manicure</button>
-                                                <button type="button" class="btn btn-primary waves-effect waves-round waves-light waves-effect waves-classic">Pedicure</button>
-                                                <button type="button" class="btn btn-primary waves-effect waves-round waves-light waves-effect waves-classic">Gel Polish</button>
+                                    <div class="row mt-20">
+                                        <div class="col-sm-12 offset-md-1 col-md-10">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4 border-customer-info text-center pb-40">
+                                                    <div class="oval-div mt-40 mb-20 position-relative">
+                                                        <div class="position-absolute inside-oval-div">
+                                                            <div class="position-relative">
+                                                                <h1 class="mt-20 text-center color-0d69e3 font-size-26 font-weight-500">JK</h1>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h4 class="my-20 text-center font-size-18 font-weight-500">Jozef Kondratovich</h4>
+                                                    <h4 class="color-gray font-weight-normal font-size-14"><i class="mr-10 fa fa-phone"></i>481-175-9553</h4>
+                                                    <h4 class="color-gray font-weight-normal font-size-14"><i class="mr-10 far fa-envelope"></i>jozef950@yahoo.com</h4>
+                                                </div>
+                                                <div class="col-sm-12 col-md-7 ml-20">
+                                                    <h4 class="my-20 color-gray font-size-14 font-weight-500 mb-15">Booking Time</h4>
+                                                    <h4 class="my-20 nn-color-black font-size-16 font-weight-500 mb-20">Thursday, 19 Oct 2018 <span class="time ml-20">17:00 pm</span></h4>
+                                                    <hr class="m-0">
+                                                    <h4 class="my-20 color-gray font-size-14 font-weight-500 mb-15">Request Services</h4>
+                                                    <span class="badge font-size-14 py-10 badge-custom card-heading-avail color-white">Manicure</span>
+                                                    <span class="badge font-size-14 py-10 badge-custom card-heading-avail color-white">Pedicure</span>
+                                                    <span class="badge font-size-14 py-10 badge-custom card-heading-avail color-white">Gel Polish</span>
+                                                    <hr class="mx-0 my-20">
+                                                    <h4 class="color-gray font-size-14 font-weight-500 mb-15">Request Nail Tech</h4>
+                                                    <div class="card bg-white border-0 mb-20">
+                                                        <div class="card-body text-center card-ready-tech px-0 pt-0">
+                                                            <div class="avatar avatar-54 float-left">
+                                                                <img src="../../assets/portraits/21.jpg" alt="">
+                                                            </div>
+                                                            <div class="text-left pl-70">
+                                                                <h3 class="nn-color-black font-size-16 font-weight-500 mb-0 mt-10">Anna Fali</h3>
+                                                                <h3 class="nn-color-gray font-size-12 font-weight-normal mb-0 mt-10">Anna</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="mt-20">Request: <span class="sp-nailtech">Christina</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -1784,6 +1989,89 @@
 </div>
 <!-- End Page -->
 
+<!-- Modal -->
+<div class="modal fade nn-modal-mobile" id="mdl-request-nailtech" aria-hidden="true" aria-labelledby="mdl-request-nailtech"
+     role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sidebar modal-simple">
+        <div class="modal-content">
+            <div class="modal-header box-inset pb-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <div class="modal-title clearfix">
+                    <h3 class="font-size-20 color-black-fixed font-weight-500 mt-10">Suggest Time</h3>
+                </div>
+            </div>
+            <div class="modal-body mt-0">
+                <div class="row box-inset">
+                    <div class="col-12">
+                        <div class="card bg-white border-0 mb-20">
+                            <div class="card-body text-center card-ready-tech px-0 pt-0">
+                                <div class="avatar avatar-54 float-left mt-15">
+                                    <img src="../../assets/portraits/21.jpg" alt="">
+                                </div>
+                                <div class="text-left pl-70">
+                                    <h3 class="nn-color-black font-size-16 font-weight-500 mb-0 mt-10">Clarke Gillebert (Clarke)</h3>
+                                    <p class="nn-color-gray font-size-14 font-weight-normal mb-0 mt-10">Clarke will be not available on your selecting time:
+                                        <span class="color-blue"><br>19 Oct, 2018 - 17:00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="font-size-14 color-black-fixed font-weight-500 mt-10">Please check the closest available schedule:</h3>
+                    </div>
+                    <div class="col-12 ">
+                        <div class="card bg-white time-schedule mb-20">
+                            <div class="card-body text-center card-ready-tech p-0">
+                                <div class="float-left text-center px-20">
+                                    <h2 class="color-black font-weight-bold font-size-40 mx-10 my-10">18</h2>
+                                    <h4 class="color-gray font-size-14 mx-10 mt-0 mb-10">Oct 2018</h4>
+                                </div>
+                                <div class="text-left pl-80">
+                                    <h2 class="nn-color-gray font-weight-normal font-size-18 mx-10 mt-30">12:00 pm - 13:00 pm</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 ">
+                        <div class="card bg-white time-schedule active mb-20">
+                            <div class="card-body text-center card-ready-tech p-0">
+                                <div class="float-left text-center px-20">
+                                    <h2 class="color-black font-weight-bold font-size-40 mx-10 my-10">18</h2>
+                                    <h4 class="color-gray font-size-14 mx-10 mt-0 mb-10">Oct 2018</h4>
+                                </div>
+                                <div class="text-left pl-80">
+                                    <h2 class="nn-color-gray font-weight-normal font-size-18 mx-10 mt-30">12:00 pm - 13:00 pm</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 ">
+                        <div class="card bg-white time-schedule mb-20">
+                            <div class="card-body text-center card-ready-tech p-0">
+                                <div class="float-left text-center px-20">
+                                    <h2 class="color-black font-weight-bold font-size-40 mx-10 my-10">18</h2>
+                                    <h4 class="color-gray font-size-14 mx-10 mt-0 mb-10">Oct 2018</h4>
+                                </div>
+                                <div class="text-left pl-80">
+                                    <h2 class="nn-color-gray font-weight-normal font-size-18 mx-10 mt-30">12:00 pm - 13:00 pm</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer px-30 pt-20">
+                <button type="button" class="btn font-size-16 nn-color-gray nn-btn-default mr-auto" data-dismiss="modal">Close</button>
+                <button type="button" class="btn font-size-16 btn-next nn-btn-primary">Change Date & Time</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
 
 <!-- Footer -->
 <footer class="site-footer">
@@ -1844,7 +2132,8 @@
 <script src="../../assets/js/Plugin/matchheight.js"></script>
 <script src="../../assets/js/Plugin/select2.js"></script>
 <script src="../../assets/js/Plugin/bootstrap-datepicker.js"></script>
-
-<script src="../../assets/tannv/js/book-an-appointment.js"></script>
+<script src="../../assets/vendor/owl-carousel/owl.carousel.js"></script>
+<script src="../../assets/vendor/slick-carousel/slick.js"></script>
+<script src="../../assets/anhtt/js/book-appointment.js"></script>
 </body>
 </html>

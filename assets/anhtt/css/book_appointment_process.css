@@ -37,3 +37,228 @@ span.pearl-title {
 .pearl.active > span.pearl-title {
     color: #2c3a4a !important;
 }
+.datepicker-inline {
+    width: 100%;
+}
+.datepicker-inline .table-condensed {
+    width: 100%;
+    font-size: 15px;
+    color: #526069;
+}
+.datepicker table tr td.active:not([disabled]):not(.disabled):active, .datepicker table tr td.active:not([disabled]):not(.disabled).active, .show > .datepicker table tr td.active.dropdown-toggle, .datepicker table tr td.active.highlighted:not([disabled]):not(.disabled):active, .datepicker table tr td.active.highlighted:not([disabled]):not(.disabled).active, .show > .datepicker table tr td.active.highlighted.dropdown-toggle {
+    color: #fff;
+    background-color: #17b3a3;
+    border-color: #17b3a3;
+    box-shadow: none;
+}
+.btn-time {
+    margin: 5px 0;
+    color: #17b3a3;
+    border-radius: 4px;
+    border: solid 1px #44d6c8;
+    background-color: #ffffff;
+}
+.btn-time:active, .btn-time:focus{
+    margin: 5px 0;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #17b3a3;
+}
+.pearls {
+    border-radius: 4px;
+    box-shadow: inset 0 -1px 0 0 #f1f4f5;
+    background-color: #ffffff;
+    padding: 10px;
+}
+@media (min-width: 1024px) {
+    .pearls {
+        margin: 0 -30px;
+    }
+}
+@media (max-width: 500px) {
+    .pearl-selected {
+        display: none;
+    }
+}
+.winzard-buttons > a.btn-primary {
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    background-color: #17b3a3;
+}
+.checkbox-custom {
+    border-radius: 4px;
+    border: solid 1px #ccd5db;
+    background-color: #ffffff;
+    padding: 12px 12px 12px 30px;
+}
+.checkbox-custom.active {
+    border-radius: 4px;
+    border: solid 1px #17b3a3;
+    background-color: #17b3a3;
+    padding: 12px 12px 12px 30px;
+    color: #fff;
+}
+.checkbox-success-custom input[type=checkbox]:checked+input[type=hidden]+label::before, .checkbox-success-custom input[type=checkbox]:checked+label::before, .checkbox-success-custom input[type=radio]:checked+input[type=hidden]+label::before, .checkbox-success-custom input[type=radio]:checked+label::before {
+    background-color: #fff;
+    border-color: #fff;
+    color: #fff;
+}
+.checkbox-custom label::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding-top: 1px;
+    margin-left: -20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #17b3a3;
+    text-align: center;
+}
+.checkbox-custom label {
+    font-size: 16px;
+}
+.div-nailtech {
+    margin: 0 20px 0 20px;
+}
+.card-heading-avail {
+    background-color: #1de8b6;
+}
+.card-heading-no-avail {
+    background-color: #ff4c52;
+
+}
+.slick-list.draggable {
+    background-color: #f3f7f9;
+}
+.slick-initialized .slick-slide {
+    margin: 10px;
+}
+.avatar-54 {
+    width: 54px;
+    height: 54px;
+}
+#choose-nailtech {
+    display: none;
+}
+.slick-arrow::before {
+    color: #76838f;
+    font-size: 25px;
+    opacity: 1 !important;
+}
+.border-radius-4 {
+    border-radius: 4px !important;
+}
+.avail-nail-tech {
+    border-radius: 4px;
+    border: solid 1px #d6dde8;
+}
+.card {
+    margin-bottom: 20px !important;
+}
+.w-100-p {
+    width: 100% !important;
+}
+.modal-dialog.modal-sidebar {
+    max-width: 360px;
+    height: 100% !important;
+}
+.modal-sidebar button.close {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    z-index: 1;
+}
+.box-inset {
+    box-shadow: inset 0 -1px 0 0 #f1f4f5;
+}
+.time-schedule {
+    border-radius: 4px;
+    border: solid 1px #d6dde8;
+    background-color: #ffffff;
+}
+.time-schedule.active {
+    border-radius: 4px;
+    background-color: #17b3a3 !important;
+}
+.time-schedule.active > div > div > h2, .time-schedule.active > div > div > h4{
+    color: #fff !important;
+}
+.color-black {
+    color: #263238;
+}
+.color-gray {
+    color: #76838f;
+}
+.btn-next, .btn-finish {
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    background-color: #17b3a3;
+}
+button.mr-auto {
+    border-radius: 4px;
+    background-color: #f3f7f9;
+}
+.modal-footer > button {
+    height: 44px;
+}
+.modal-content {
+    height: 100%;
+}
+@media (max-width: 767.98px) {
+    .modal-dialog.modal-sidebar {
+        max-width: 100%;
+        height: 100% !important;
+    }
+    .nailtect-avatar {
+        float: left;
+        margin-top: 15px;
+    }
+    .info-nailtech {
+        float: left;
+        text-align: left !important;
+        padding-left: 20px;
+    }
+    .avail-nail-tech {
+        border: none !important;
+        margin-bottom: 10px;
+    }
+    .card-ready-tech {
+        padding: 0 !important;
+    }
+}
+.open-modal.selected {
+    border-radius: 4px !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08) !important;
+    background-color: #18bbad !important;
+}
+.open-modal.selected > div.card-body > h3 {
+    color: #fff !important;
+}
+.open-modal.selected > .card-heading-avail {
+    background-color: #18bbad !important;
+}
+
+.oval-div {
+    border-radius: 50%;
+    border: solid 1px #d6dde8;
+    background-color: #fff;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+}
+.inside-oval-div {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.border-customer-info {
+    border-radius: 4px;
+    border: solid 1px #d6dde8;
+    background-color: #ffffff;
+}
