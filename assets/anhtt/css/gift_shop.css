@@ -216,7 +216,13 @@ label {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.gift-item-detail-description {
+    font-size: 12px;
+}
 @media (max-width: 479.98px) {
+    body {
+        font-size: 16px !important;
+    }
     .page-header {
         padding-left: 0;
         padding-right: 0;
@@ -235,9 +241,29 @@ label {
     .gift-item-detail {
         padding-top: 10px !important;
     }
+    .gift-item-detail-description {
+        font-size: 14px !important;
+    }
+    .remove-cart-item {
+        padding: 10px 5px;
+        font-size: 44px;
+    }
+    .fa-shopping-cart, .fa-bars {
+        font-size: 44px;
+    }
+}
+@media only screen and (max-width: 768.02px) {
+    .gift-item-detail-label {
+        padding-left: 10px;
+    }
     .action-btn-mobile {
         position: fixed !important;
         background-color: #fff !important;
         margin-right: 0;
+    }
+}
+@media only screen and (max-width: 768.02px) and (min-width: 479.99px) {
+    .gift-item-detail-label {
+        padding-left: 10px;
     }
 }
