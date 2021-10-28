@@ -74,7 +74,7 @@ body.no-nav {
     border-radius: 15px;
 }
 .gift-item:hover, .gift-item.selected {
-    box-shadow: 0 9px 6px 10px rgb(0 0 0 / 4%)
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px
 }
 
 .color-1f2d3d {
