@@ -55,18 +55,28 @@ body.no-nav {
     font-weight: 500;
 }
 .gift-image {
+     width: 100%;
+     height: 160px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     border-radius: 10px;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+ }
+
+.gift-item.selected .gift-image {
     width: 100%;
-    height: 200px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 132px;
 }
+
 .gift-item {
     border-radius: 15px;
 }
+.gift-item:hover, .gift-item.selected {
+    box-shadow: 0 9px 6px 10px rgb(0 0 0 / 4%)
+}
+
 .color-1f2d3d {
     color: #1f2d3d;
 }

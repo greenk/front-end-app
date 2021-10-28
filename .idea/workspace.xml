@@ -7,7 +7,6 @@
     <list default="true" id="ac915689-cf59-439b-9ae3-d32bbf39cec0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/anhtt/css/gift_shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/anhtt/css/gift_shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/anhtt/web_list_gifts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/anhtt/web_list_gifts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +296,9 @@
       <workItem from="1634778451996" duration="1188000" />
       <workItem from="1635260135227" duration="892000" />
       <workItem from="1635297151041" duration="25000" />
-      <workItem from="1635308595006" duration="32000" />
+      <workItem from="1635308595006" duration="1233000" />
+      <workItem from="1635317197090" duration="50000" />
+      <workItem from="1635429750281" duration="889000" />
     </task>
     <servers />
   </component>
@@ -331,6 +332,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/anhtt/js/appointment_employer.js">
