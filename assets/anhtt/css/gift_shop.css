@@ -331,3 +331,51 @@ label {
         column-gap: 1.429rem;
     }
 }
+
+@media (min-width: 768px) {
+    .cart-number-badge {
+        position: relative;
+        left: 28px;
+        top: -59px;
+        background: #039688;
+        border-radius: 9px;
+        padding: 2px;
+        font-size: 11px;
+        color: #fff
+    }
+}
+
+@media (max-width: 767px) and (min-width: 496px) {
+    .cart-number-badge {
+        position: relative;
+        left: -17px;
+        top: -21px;
+        background: #039688;
+        border-radius: 52px;
+        padding: 3px;
+        font-size: 14px;
+        color: #fff;
+    }
+    .fa-shopping-cart {
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 495px) {
+    .navbar-header div {
+        display:inline-block;
+    }
+    .cart-number-badge {
+        position: relative;
+        left: -17px;
+        top: -21px;
+        background: #039688;
+        border-radius: 52px;
+        padding: 3px;
+        font-size: 14px;
+        color: #fff;
+    }
+    .fa-shopping-cart {
+        font-size: 33px;
+    }
+}
