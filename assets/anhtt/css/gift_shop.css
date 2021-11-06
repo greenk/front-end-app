@@ -201,11 +201,20 @@ label {
     padding-top: 30px !important;
 }
 .remove-cart-item {
-    padding: 0px 5px 0px 5px;
+    padding: 1px 5px 1px 5px;
     border: solid 1px #ddd;
     border-radius: 5px;
     float: right;
     color: #76838f;
+    margin:2px;
+}
+.edit-cart-item {
+    padding: 2px 1px 0px 5px;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    float: right;
+    color: #76838f;
+    margin:2px;
 }
 .buy-another {
     margin-bottom: 11px;
@@ -229,6 +238,7 @@ label {
 }
 .gift-item-detail-description {
     font-size: 12px;
+    word-break: break-word;
 }
 @media (max-width: 479.98px) {
     body {
@@ -256,8 +266,14 @@ label {
         font-size: 14px !important;
     }
     .remove-cart-item {
-        padding: 10px 5px;
-        font-size: 44px;
+        padding: 10px 7px;
+        font-size: 40px;
+        margin: 2px;
+    }
+    .edit-cart-item {
+        padding: 11px 1px 6px 4px;
+        font-size: 40px;
+        margin: 2px;
     }
     .fa-shopping-cart, .fa-bars {
         font-size: 44px;
